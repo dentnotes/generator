@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Notes Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: 
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+			
+        }
+
+        hr {
+            border: 2px solid #3498db;
+            margin: 20px 0;
+        }
+
+        #container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #checkboxes,
+        #output {
+            width: 45%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+			background-color:
+        }
+		 #output2 {
+            width: 45%;
+          
+            
+
+        }
+
+        .section {
+            display: none;
+            margin-top: 10px;
+			background-color:
+        }
+
+        .toggle-button {
+            background-color: #A6B9CD;
+			border-color: 1px black;
+			border-left-color: black;
+            color: black;
+            border: none;
+            padding: 2px;
+            border-radius: 3px;
+			
+            cursor: pointer;
+			 background-color: #F30000 
+    	 cursor: pointer;
+   		 width: 75%;
+			
+        }
+		.toggle-button2 {
+			background-color: #A6B9CD;
+			border-color: 1px black;
+			border-left-color: black;
+            color: black;
+            border: none;
+            padding: 2px;
+            border-radius: 3px;
+            cursor: pointer;
+			 background-color: #E64A4D 
+    	 cursor: pointer;
+   		 width: 75%;
+        }
+
+        .toggle-button:hover {
+            background-color: #E64A4D;
+        }
+		.toggle-button5 {
+    background-color: #3498db; /* Updated color: A nice shade of blue */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    --rem: 16;
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+    --ck-color-base-border: rgba(0, 0, 0, 0.12) !important;
+    font-weight: 400;
+    color: white;
+    -webkit-font-smoothing: antialiased !important;
+    font-size: 0.938rem;
+    line-height: 1.5;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+    position: relative;
+    display: block;
+    float: left;
+    margin-bottom: 8px; /* Improved section breakage */
+    border-bottom: 1px solid #f9f9f9;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            resize: none;
+            overflow: auto;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        select,
+        input[type="text"] {
+            margin-top: 5px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+   #generatedText {
+    width: calc(28% - 5px); /* Adjust the width as needed */
+    height: 75%;
+    resize: none;
+    overflow: auto;
+    position: fixed; /* Change to fixed */
+    top: 150px;
+    right: 1;
+}
+
+   table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+		
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Clinic Notes Generator</h1>
+</header>
+	
+	
+	    
+
+	
+   
+
+<main>
+	
+<div id="container">
+	
+    <div id="checkboxes">
+		
+      
+   
+ <hr>
+			
+                <button  class="toggle-button5" onclick="toggleSection('dxSection1')">DIAGNOSTIC SERVICES (0xx)</button> 
+		
+		
+		
+			
+    
+		<div id="dxSection1" class="section">
+			
+			
+        <button class="toggle-button" onclick="toggleSection('011Section1')" >011 Comprehensive oral examination</button>  
+		<input type="Checkbox" id="B100Checkbox" class="TEST">  
+		
+<div id="011Section1" class="section" >
+	
+  <input type="Checkbox" id="ptCheckbox" class="TEST"> Pt. presented to
+        <select id="yearDropdown"  class="TEST">
+            <option value=""> </option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+            <option value="5th Year">5th Year</option>
+        </select>
+        <select id="clinicDropdown"  class="TEST"  class="TEST">
+            <option value="GDP Clinic">GDP Clinic</option>
+            <option value="Pros Clinic">Pros Clinic</option>
+            <option value="Perio Clinic">Perio Clinic</option>
+        </select>
+        <select id="codeDropdown"  class="TEST">
+			<option value=""></option>
+			<option value="2.1">2.1</option>
+			<option value="3.1">3.1</option>
+			<option value="3.2">3.2</option>
+            <option value="3.3">3.3</option>
+            <option value="3.4">3.4</option>
+			<option value="4.1">4.1</option>
+			<option value="4.2">4.2</option>
+            <option value="5.1">5.1</option>
+            <option value="5.2">5.2</option>
+			<option value="6.2">6.2</option>
+			<option value="6.3">6.3</option>
+        </select>
+        for
+        <select id="typeDropdown"  class="TEST">
+            <option value="011">011</option>
+            <option value="S/C">S/C</option>
+            <option value="Consult">Consult</option>
+        </select>
+		OR
+		<input type="text" id="A1TextInput" class="TEST" placeholder="Enter details..."> <br>
+        <input type="Checkbox" id="c3sCheckbox" class="TEST"> 3C’s confirmed
+		<input type="text" id="c3sTextInput" class="TEST" placeholder="Enter details..."> <br>
+
+        <input type="Checkbox" id="colgateCheckbox" class="TEST"> Colgate 1.5% Hydrogen Peroxide Mouth rinse given.
+        
+       <br>
+       
+        <input type="Checkbox" id="medicalHxCheckbox" class="TEST"> Medical Hx
+        <select id="hxDropdown"  class="TEST">
+            <option value="updated">Updated</option>
+            <option value="verified- no changes">Verified</option>
+             <option value="taken">taken</option>
+		</select> <br><br>
+	
+	<pr></pr>
+
+       <input type="Checkbox" id="B1Checkbox" class="TEST"checked hidden=""> RFV:
+	<input type="text" id="B1TextInput" class="TEST" placeholder="Enter details..."> <br>
+       <input type="Checkbox" id="B2Checkbox" class="TEST" checked hidden=""> CC:  
+	<input type="text" id="B2TextInput" class="TEST" placeholder="Enter details..."> <br>
+	
+	<strong>Hx of Present Complaint</strong> 
+	<input type="Checkbox" id="B105Checkbox" class="TEST" hidden=""> <br>
+	<input type="Checkbox" id="B30Checkbox" class="TEST" checked hidden=""> Site:  
+	<input type="text" id="B30TextInput" class="TEST" placeholder="Enter details..."><br>
+	  
+	<input type="Checkbox" id="B31Checkbox" class="TEST"checked hidden=""> Onset  
+	<input type="text" id="B31TextInput" class="TEST" placeholder="Enter details..."><br>
+	
+	<input type="Checkbox" id="B32Checkbox" class="TEST"checked hidden=""> Character  
+	<input type="text" id="B32TextInput" class="TEST" placeholder="Enter details..."><br>
+	 
+	<input type="Checkbox" id="B33Checkbox" class="TEST"checked hidden=""> Radiation  
+	<input type="text" id="B33TextInput" class="TEST" placeholder="Enter details..."><br>
+	 
+	<input type="Checkbox" id="B34Checkbox" class="TEST"checked hidden=""> Alleviating factor  
+	<input type="text" id="B34TextInput" class="TEST" placeholder="Enter details..."><br>
+	 
+	<input type="Checkbox" id="B35Checkbox" class="TEST"checked hidden=""> Exacerbating factors 
+	<input type="text" id="B35TextInput" class="TEST" placeholder="Enter details..."><br>
+	
+	<input type="Checkbox" id="B36Checkbox" class="TEST"checked hidden=""> Severity  
+	<input type="text" id="B36TextInput" class="TEST" placeholder="Enter details..."> <br> <br> <br>
+	
+	
+	<input type="Checkbox" id="B11Checkbox" class="TEST"> <strong>Select ALL</strong>
+        <input type="Checkbox" id="B3Checkbox" class="TEST"> E/O examination:  
+        <input type="Checkbox" id="B4Checkbox" class="TEST"> Temporalis m   
+        <input type="Checkbox" id="B5Checkbox" class="TEST"> masseter m.
+		<input type="Checkbox" id="B6Checkbox" class="TEST"> TMJ  
+        <input type="Checkbox" id="B7Checkbox" class="TEST">salivary glands
+		<input type="Checkbox" id="B8Checkbox" class="TEST"> lymph nodes  
+        <input type="Checkbox" id="B9Checkbox" class="TEST"> muscles of facial expression
+ 		<input type="Checkbox" id="B10Checkbox" class="TEST"> – NAD.  <br> <br>
+		<input type="Checkbox" id="B12Checkbox" class="TEST"> <strong>Select ALL</strong>
+		<input type="Checkbox" id="B13Checkbox" class="TEST"> I/OE:
+		<input type="Checkbox" id="B14Checkbox" class="TEST">  FOM 
+        <input type="Checkbox" id="B15Checkbox" class="TEST">  tongue
+ 		<input type="Checkbox" id="B16Checkbox" class="TEST"> buccal mucosa 
+		<input type="Checkbox" id="B17Checkbox" class="TEST">  palatal mucosa
+ 		<input type="Checkbox" id="B117Checkbox" class="TEST"> – NAD <br>
+        <input type="Checkbox" id="htpsrCheckbox" class="TEST"> Hard tissue & PSR – as charted in ISOH. <br> <br>
+       
+	 <input type="Checkbox" id="radioCheckbox" class="TEST">
+	 <select id="radioDropdown"  class="TEST">
+            <option value="OPG & 2x BWs taken">OPG & 2x BWs taken</option>
+            <option value="2x BWs taken. No OPG Indicated">2x BWs taken</option>
+             <option value="No x-rays taken">No x-rays taken</option>
+		</select> <br>
+	<input type="Checkbox" id="B18CCheckbox" class="TEST" checked hidden=""> Main Findings:
+	
+	
+	<input type="text" id="B18CTextInput" class="TEST" placeholder="Enter details..."> <br>
+	
+		<input type="Checkbox" id="BWCheckbox" class="TEST" hidden=""> <strong>BW taken</strong> 
+	
+	
+	<br>
+	<input type="Checkbox" id="BW1Checkbox" class="TEST"checked hidden=""> Interproximal caries:
+<input type="text" id="BW1TextInput" class="TEST" placeholder="Enter details...">
+ <br>
+	<input type="Checkbox" id="BW2Checkbox" class="TEST"checked hidden="">Occlusal caries: 
+	<input type="text" id="BW2TextInput" class="TEST" placeholder="Enter details...">
+	<br>
+	<input type="Checkbox" id="BW3Checkbox" class="TEST"checked hidden="">Secondary caries:
+	<input type="text" id="BW3TextInput" class="TEST" placeholder="Enter details...">
+	 <br>
+	<input type="Checkbox" id="BW4Checkbox" class="TEST"checked hidden="" > Bone level: 
+	<input type="text" id="BW4TextInput" class="TEST" placeholder="Enter details...">
+	<br>
+	<input type="Checkbox" id="BW5Checkbox" class="TEST"checked hidden="">Calculus:
+	<input type="text" id="BW5TextInput" class="TEST" placeholder="Enter details...">
+	<br>
+	<input type="Checkbox" id="BW6Checkbox" class="TEST"checked hidden="">Restoration: 
+	<input type="text" id="BW6TextInput" class="TEST" placeholder="Enter details...">
+	<br>
+	
+	
+	<br>
+	<input type="Checkbox" id="opgCheckbox" class="TEST" hidden=""> <strong>OPG taken</strong> 
+	
+	
+	<br>
+	<input type="Checkbox" id="opg1Checkbox" class="TEST"checked hidden=""> Missing teeth: 
+<input type="text" id="opg1TextInput" class="TEST" placeholder="Enter details...">
+ <br>
+	<input type="Checkbox" id="opg2Checkbox" class="TEST"checked hidden="">8’s: 
+	<input type="text" id="opg2TextInput" class="TEST" placeholder="Enter details...">
+	<br>
+	<input type="Checkbox" id="opg3Checkbox" class="TEST"checked hidden="">Caries:
+	<input type="text" id="opg3TextInput" class="TEST" placeholder="Enter details...">
+	: <br>
+	<input type="Checkbox" id="opg4Checkbox" class="TEST"checked hidden="" >Restoration/dental work:
+	<input type="text" id="opg4TextInput" class="TEST" placeholder="Enter details...">
+	<br>
+	<input type="Checkbox" id="opg5Checkbox" class="TEST"checked hidden="">Bone level: 
+	<input type="text" id="opg5TextInput" class="TEST" placeholder="Enter details...">
+	<br>
+	<input type="Checkbox" id="opg6Checkbox" class="TEST"checked hidden="">Mx sinus:
+	<input type="text" id="opg6TextInput" class="TEST" placeholder="Enter details...">
+	<br>
+	<input type="Checkbox" id="opg7Checkbox" class="TEST"checked hidden="">Condyles
+	<input type="text" id="opg7TextInput" class="TEST" placeholder="Enter details...">
+	<br>
+	
+	<input type="Checkbox" id="opg8Checkbox" class="TEST"checked hidden="">Ghost images: 
+	<input type="text" id="opg8TextInput" class="TEST" placeholder="Enter details...">
+	<br>
+	
+	
+<br> <br>
+	<input type="Checkbox" id="B18Checkbox" class="TEST" checked hidden=""> Provisional Tx: 
+	<input type="text" id="B18TextInput" class="TEST" placeholder="Enter details..."> <br>
+	<strong>Tx options discussed and presented to pt: </strong>
+	<input type="Checkbox" id="B25Checkbox" class="TEST" hidden="">  <br>
+	
+	<input type="Checkbox" id="B19Checkbox" class="TEST" checked hidden=""> -Systemic phase: 
+	<input type="text" id="B19TextInput" class="TEST" placeholder="Enter details..."> <br>
+	<input type="Checkbox" id="B20Checkbox" class="TEST"checked hidden=""> -Acute phase 
+	<input type="text" id="B20TextInput" class="TEST" placeholder="Enter details..."> <br>
+	<input type="Checkbox" id="B21Checkbox" class="TEST"checked hidden=""> -Disease control:   
+	<input type="text" id="B21TextInput" class="TEST" placeholder="Enter details..."> <br>
+	<input type="Checkbox" id="B22Checkbox" class="TEST"checked hidden=""> -Definitive phase:  
+	<input type="text" id="B22TextInput" class="TEST" placeholder="Enter details..."> <br>
+	<input type="Checkbox" id="B23Checkbox" class="TEST"checked hidden=""> Maintenance phase:   
+	<input type="text" id="B23TextInput" class="TEST" placeholder="Enter details..."> <br>
+	<input type="Checkbox" id="B24Checkbox" class="TEST"checked hidden=""> Extra comment: 
+	<input type="text" id="B24TextInput" class="TEST" placeholder="Enter details...">
+	<br><br>
+
+	  <input type="Checkbox" id="supervisorCheckbox" class="TEST"> Supervisor: Dr
+    <input type="text" id="supervisornameTextInput" class="TEST" placeholder="Enter details..."> <br>
+    <input type="Checkbox" id="nvCheckbox" class="TEST"> N/V:
+    <input type="text" id="nvTextInput" class="TEST" placeholder="Enter details..."> OR <br>
+		<input type="Checkbox" id="waitlistCheckbox" class="TEST"> Patient placed on general waitlist and seperated
+		OR
+    <input type="text" id="waitlistTextInput" class="TEST" class="TEST" placeholder="Enter details...">
+	
+	 <hr>
+ </div>
+			
+			  <button class="toggle-button" onclick="toggleSection('paeds011Section1')">011 Paediatric dentistry assessment examination & dental chart</button>  
+		<input type="Checkbox" id="B1001Checkbox" class="TEST">  
+		
+<div id="paeds011Section1" class="section">
+			 </div>
+			
+			  <button class="toggle-button" onclick="toggleSection('013Section1')">013 Oral examination – limited (assessment of dental traumatic injuries in children</button>  
+		<input type="Checkbox" id="B1002Checkbox" class="TEST">  
+<div id="013Section1" class="section">
+			 </div>
+			
+			  <button class="toggle-button" onclick="toggleSection('013eSection1')"> 013 Oral examination – limited (dental emergencies)</button>  
+		<input type="Checkbox" id="B1003Checkbox" class="TEST">  
+		
+<div id="013eSection1" class="section">
+			 </div>
+			 <hr>
+		
+			 </div>
+     <button class="toggle-button5" onclick="toggleSection('ppSection')">PREVENTIVE, PROPHYLACTIC & BLEACHING SERVICES (1xx)</button> <br>
+		
+		<div id="ppSection" class="section">
+		
+		<button class="toggle-button" onclick="toggleSection('scaleAndCleansSection')">114	Removal of calculus – first appointment</button> 
+		<input type="Checkbox" id="selectSpecificSCCheckbox" class="TEST"> Select All <br>
+
+
+<div id="scaleAndCleansSection" class="section">
+        <h3>Scale and Cleans</h3> <br>
+        <input type="Checkbox" id="consentsCheckbox" class="TEST"> Pt consents to S/C – informed of risks bleeding, post op sensitivity, natural gaps between teeth <br>
+        <input type="Checkbox" id="debridementCheckbox" class="TEST"> Debridement of all quadrants using ultrasonic scaler <br>
+        <input type="Checkbox" id="refinementCheckbox" class="TEST"> Refinement using hand scalers <br>
+        <input type="Checkbox" id="prophyCheckbox" class="TEST"> Prophy and fluoride applied <br>
+        <input type="Checkbox" id="ohiCheckbox" class="TEST"> OHI provided
+  </div>
+		
+			
+			  <button class="toggle-button" onclick="toggleSection('116Section1')">Enamel micro-abrasion – per tooth (tooth lightening)</button>  
+		<input type="Checkbox" id="116Checkbox" class="TEST"> <br>
+		
+<div id="116Section1" class="section">
+			
+		</div>
+		<hr>
+		</div>
+		 
+		<button class="toggle-button5" onclick="toggleSection('perioSection1')">PERIODONTICS (2xx)</button>  
+		
+		
+		
+		<div id="perioSection1" class="section">
+		
+			<button class="toggle-button" onclick="toggleSection('221Section')">221 	Clinical periodontal analysis and recording </button>
+<input type="Checkbox" id="221Checkbox" class="TEST"> Select All
+     
+	
+		
+<div id="221Section" class="section">
+	
+	
+		</div>
+			
+			
+					<button class="toggle-button" onclick="toggleSection('250Section')">250	Active non-surgical periodontal therapy - per quadrant</button>
+<input type="Checkbox" id="250Checkbox" class="TEST"> Select All
+     
+	
+		
+<div id="250Section" class="section">
+	
+	
+		</div>
+			
+			
+			<hr> 
+		</div>
+		
+		
+		<button class="toggle-button5" onclick="toggleSection('surgSection1')">ORAL SURGERY (3xx))</button> 
+		
+		<div id="surgSection1" class="section">
+		<button class="toggle-button" onclick="toggleSection('oralsurgSection')">Oral Surg</button>
+<input type="Checkbox" id="F1Checkbox" class="TEST"> Select All
+      
+  
+<div id="oralsurgSection" class="section">
+<h2>Oral Surg</h2>
+
+
+</div> 
+			<hr>
+ </div> 
+   		 
+		
+		<button class="toggle-button5" onclick="toggleSection('endoSection1')">ENDODONTICS (4xx)</button> 
+		
+		<div id="endoSection1" class="section">
+		
+				<button class="toggle-button2" onclick="toggleSection('endo1Section')">Endo 1</button>
+<input type="Checkbox" id="endo1allCheckbox" class="TEST"> Select All
+      
+  
+<div id="endo1Section" class="section"> 
+	<h3>Endo 1</h3>
+	
+	
+	<input type="Checkbox" id="ptendo1Checkbox" class="TEST"> Pt. presented to
+        <select id="endo1yearDropdown"  class="TEST">
+     
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+            <option value="5th Year">5th Year</option>
+        </select>
+        <select id="endo1clinicDropdown"  class="TEST">
+            <option value="Pros Clinic">Pros Clinic</option>
+            <option value="Perio Clinic">Perio Clinic</option>
+			 <option value="GDP Clinic">GDP Clinic</option>
+        </select>
+        <select id="endo1codeDropdown"  class="TEST">
+			  <option value="5.1">5.1</option>
+            <option value="5.2">5.2</option>
+			<option value="2.1">2.1</option>
+			<option value="3.1">3.1</option>
+			<option value="3.2">3.2</option>
+            <option value="3.3">3.3</option>
+            <option value="3.4">3.4</option>
+			<option value="4.1">4.1</option>
+			<option value="4.2">4.2</option>
+          			<option value="6.2">6.2</option>
+			<option value="6.3">6.3</option>
+        </select>
+        for
+        <select id="endo1typeDropdown"  class="TEST">
+			<option value="F/F 2ndary Impression"> 2ndary Impression</option>
+            <option value="011">011</option>
+            <option value="S/C">S/C</option>
+            <option value="Consult">Consult</option>
+        </select>
+		OR
+		<input type="text" id="endo1A1TextInput" class="TEST" placeholder="Enter details..."> <br>
+        <input type="Checkbox" id="endo1c3sCheckbox" class="TEST"> 3C’s confirmed
+		<input type="text" id="endo1c3sTextInput" class="TEST" placeholder="Enter details..."> <br>
+
+        <input type="Checkbox" id="endo1colgateCheckbox" class="TEST"> Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+       
+        <input type="Checkbox" id="endo1medicalHxCheckbox" class="TEST"> Medical Hx
+        <select id="endo1hxDropdown"  class="TEST">
+            <option value="updated">Updated</option>
+            <option value="verified">Verified</option>
+             <option value="taken">taken</option>
+		</select> <br><br>
+	
+	
+	
+	
+	<input type="Checkbox" id="endo1G22Checkbox" class="TEST"> Pt well on discharge <br>
+	<input type="Checkbox" id="endo1supervisorCheckbox" > Supervisor: Dr
+    <input type="text" id="endo1supervisornameTextInput" placeholder="Enter details..."> <br>
+	
+ <input type="Checkbox" id="endo1nvCheckbox" class="TEST"> N/V:
+    <input type="text" id="endo1nvTextInput" class="TEST" placeholder="Enter details..."> <br>
+	</div> <br>
+<button class="toggle-button" onclick="toggleSection('EndocmSection')">Endo Chemo-mechanical Prep</button>
+<input type="Checkbox" id="I1Checkbox" class="TEST"> Select All
+      
+<div id="EndocmSection" class="section">
+<h2>Endo </h2>
+
+ 
+</div> <br>
+<button class="toggle-button" onclick="toggleSection('EndoobSection')">Endo Obturation</button>
+<input type="Checkbox" id="J1Checkbox" class="TEST"> Select All
+      
+<div id="EndoobSection" class="section">
+<h2>Endo Obturation</h2>
