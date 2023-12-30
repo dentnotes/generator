@@ -6,7 +6,7 @@
     <title>Clinic Notes Generator</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif"
             margin: 0;
             padding: 0;
             display: flex;
@@ -23,6 +23,7 @@
             text-align: center;
             width: 100%;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
         }
 
         main {
@@ -66,7 +67,8 @@
         }
 
         .toggle-button {
-            background-color: #A6B9CD;
+			font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+            background-color: #FFA500;
 			border-color: 1px black;
 			border-left-color: black;
             color: black;
@@ -81,7 +83,8 @@
 			
         }
 		.toggle-button2 {
-			background-color: #A6B9CD;
+			font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+			background-color: #FFA500;
 			border-color: 1px black;
 			border-left-color: black;
             color: black;
@@ -112,7 +115,7 @@
     line-height: 1.5;
     list-style: none;
     box-sizing: border-box;
-    font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
     position: relative;
     display: block;
     float: left;
@@ -151,6 +154,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+			font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
         }
 
         button:hover {
@@ -185,6 +189,8 @@
         }
 		
     </style>
+<script src="jQueryAssets/SpryDOMUtils.js"></script>
+<script src="Clinic notes v33A.js"></script>
 </head>
 
 <body>
@@ -516,7 +522,7 @@
 		
 		<div id="endoSection1" class="section">
 		
-				<button class="toggle-button2" onclick="toggleSection('endo1Section')">Endo 1</button>
+				<button class="toggle-button2" onclick="toggleSection('endo1Section')">014	Consultation (endodontics) </button>
 <input type="Checkbox" id="endo1allCheckbox" class="TEST"> Select All
       
   
@@ -527,23 +533,25 @@
 	<input type="Checkbox" id="ptendo1Checkbox" class="TEST"> Pt. presented to
         <select id="endo1yearDropdown"  class="TEST">
      
-            <option value="3rd Year">3rd Year</option>
+         
             <option value="4th Year">4th Year</option>
             <option value="5th Year">5th Year</option>
         </select>
         <select id="endo1clinicDropdown"  class="TEST">
+			 <option value="Endo Clinic">Endo Clinic</option>
             <option value="Pros Clinic">Pros Clinic</option>
             <option value="Perio Clinic">Perio Clinic</option>
 			 <option value="GDP Clinic">GDP Clinic</option>
         </select>
         <select id="endo1codeDropdown"  class="TEST">
-			  <option value="5.1">5.1</option>
-            <option value="5.2">5.2</option>
 			<option value="2.1">2.1</option>
 			<option value="3.1">3.1</option>
 			<option value="3.2">3.2</option>
             <option value="3.3">3.3</option>
-            <option value="3.4">3.4</option>
+            <option value="3.4">3.4</option> 
+			<option value="5.1">5.1</option>
+            <option value="5.2">5.2</option>
+			
 			<option value="4.1">4.1</option>
 			<option value="4.2">4.2</option>
           			<option value="6.2">6.2</option>
@@ -551,7 +559,7 @@
         </select>
         for
         <select id="endo1typeDropdown"  class="TEST">
-			<option value="F/F 2ndary Impression"> 2ndary Impression</option>
+			<option value="Endo Consult (014)"> Endo Consult (014)</option>
             <option value="011">011</option>
             <option value="S/C">S/C</option>
             <option value="Consult">Consult</option>
@@ -571,6 +579,203 @@
 		</select> <br><br>
 	
 	
+	<!-- E1 -->
+<input type="Checkbox" id="E1Checkbox" class="TEST">
+	CLINICAL FINDINGS
+	<br>
+    <input type="Checkbox" id="E1ACheckbox" class="TEST"> Discoloration:
+        <select id="E1ADropdown"  class="TEST">
+            <option value="unchanged">unchanged</option>
+            <option value="yellowish">yellowish</option>
+             <option value="grey">grey</option>
+		</select> <br>
+	
+	<input type="Checkbox" id="E1BCheckbox" class="TEST"> Swelling:
+        <select id="E1BDropdown"  class="TEST">
+            <option value="none">none</option>
+            <option value="intraoral">intraoral</option>
+             <option value="extraoral">extraoral</option>
+		</select> <br>
+	
+	<input type="Checkbox" id="E1CCheckbox" class="TEST"> Sinus tract:
+        <select id="E1CDropdown"  class="TEST">
+            <option value="present">present</option>
+            <option value="absent">absent</option>
+             
+		</select> <br>
+	
+<br>
+	
+	
+
+	
+		  <strong>   HX OF TOOTH ></strong> 
+	<input type="Checkbox" id="E2Checkbox" class="TEST"> PA radiograph taken. RADIOGRAPHIC EXAMINATION
+
+<br>
+	<input type="Checkbox" id="E3Checkbox" class="TEST"> Carious w/wo exposure
+	<input type="text" id="E3TextInput" class="TEST" placeholder="Enter details..."><br>
+	
+	<input type="Checkbox" id="E4Checkbox" class="TEST"> 
+	Restored
+	<input type="text" id="E4TextInput" class="TEST" placeholder="Enter details..."><br>
+	 
+	<input type="Checkbox" id="E5Checkbox" class="TEST"> Pulp capping 
+	<input type="text" id="E5TextInput" class="TEST" placeholder="Enter details..."><br>
+	 
+	<input type="Checkbox" id="E7Checkbox" class="TEST"> Hx of trauma  
+	<input type="text" id="E7TextInput" class="TEST" placeholder="Enter details..."><br>
+	 
+	<input type="Checkbox" id="E8Checkbox" class="TEST"> Previous pulpotomy 
+	<input type="text" id="E8TextInput" class="TEST" placeholder="Enter details..."><br>
+	
+	<input type="Checkbox" id="E9Checkbox" class="TEST"> Previously root treated 
+	<input type="text" id="E9TextInput" class="TEST" placeholder="Enter details..."> <br> <br> <br>
+
+
+	<input type="Checkbox" id="E10Checkbox" class="TEST" > PULP SENSIBILITY TESTS performed.
+<br>
+	
+	<input type="Checkbox" id="E11Checkbox" class="TEST"> 
+	Cold: 
+	
+	  <select id="E11Dropdown"  class="TEST">
+            <option value="Normal">Normal</option>
+		  <option value="(+)">(+)</option>
+		  <option value="(++)">(++)</option>
+		  <option value="(+++)">(+++)</option>
+		  <option value="(-)">(-)</option>
+		  
+	<input type="text" id="E11TextInput" class="TEST" placeholder="Enter details..."><br>
+	 
+	<input type="Checkbox" id="E12Checkbox" class="TEST"> EPT: 
+		   <select id="E12Dropdown"  class="TEST">   
+		  <option value="Normal">Normal</option>
+		  <option value="(+)">(+)</option>
+		  <option value="(++)">(++)</option>
+		  <option value="(+++)">(+++)</option>
+		  <option value="(-)">(-)</option>
+	<input type="text" id="E12TextInput" class="TEST" placeholder="Enter details..."><br>
+	 
+	<input type="Checkbox" id="E13Checkbox" class="TEST">Palpation:  
+			    <select id="E13Dropdown"  class="TEST">
+		       <option value="Normal">Normal</option>
+		  <option value="(+)">(+)</option>
+		  <option value="(++)">(++)</option>
+		  <option value="(+++)">(+++)</option>
+		  <option value="(-)">(-)</option>
+	<input type="text" id="E13TextInput" class="TEST" placeholder="Enter details..."><br>
+	 
+	<input type="Checkbox" id="E15Checkbox" class="TEST"> Percussion: 
+					 <select id="E15Dropdown"  class="TEST">
+		       <option value="Normal">Normal</option>
+		  <option value="(+)">(+)</option>
+		  <option value="(++)">(++)</option>
+		  <option value="(+++)">(+++)</option>
+		  <option value="(-)">(-)</option>
+	<input type="text" id="E15TextInput" class="TEST" placeholder="Enter details..."><br>
+	
+	<input type="Checkbox" id="E16Checkbox" class="TEST"> Mobility: 
+						  <select id="E16Dropdown"  class="TEST">
+		       <option value="Normal">Normal</option>
+		  <option value="(+)">(+)</option>
+		  <option value="(++)">(++)</option>
+		  <option value="(+++)">(+++)</option>
+		  <option value="(-)">(-)</option>
+	<input type="text" id="E16TextInput" class="TEST" placeholder="Enter details..."><br>
+	
+	<input type="Checkbox" id="E17Checkbox" class="TEST"checked hidden="">  
+	<input type="text" id="E17TextInput" class="TEST" placeholder="Enter details...">
+	<br> <br> 
+
+	
+	
+		<input type="Checkbox" id="E18Checkbox" class="TEST"> PULPAL DX
+        <select id="E18Dropdown"  class="TEST">
+            
+			<option value="Normal pulp">Normal pulp</option>
+            <option value="Reversible pulpitis">Reversible pulpitis</option>
+             <option value="Symptomatic irreversible pulpitis">Symptomatic irreversible pulpitis</option>
+			<option value="Asymptomatic irreversible pulpitis">Asymptomatic irreversible pulpitis</option>
+			<option value="Pulp necrosis">present</option>
+			<option value="Previous RCT initiated">Previous RCT initiated</option>
+			<option value="Previous RCT completed">Previous RCT completed</option>
+		</select> <br>
+	
+	<input type="Checkbox" id="E19Checkbox" class="TEST"> PERIAPICAL DX
+        <select id="E19Dropdown"  class="TEST">
+            
+			<option value="Normal">Normal</option>
+            <option value="Symptomatic apical periodontitis">Symptomatic apical periodontitis</option>
+			<option value="Asymptomatic apical periodontitis">Asymptomatic apical periodontitis</option>
+            <option value="Acute apical abscess">Acute apical abscess</option>
+			<option value="Chronic apical abscess">Chronic apical abscess</option>
+            <option value="Condensing osteitis">Condensing osteitis</option>
+             
+		</select> <br>
+	
+
+<br>
+
+
+<input type="Checkbox" id="E20Checkbox" class="TEST" > Results from tests & diagnosis were discussed with pt. 
+							  
+<input type="Checkbox" id="E21Checkbox" class="TEST" > TX OPTIONS
+							  
+		<select id="E21Dropdown"  class="TEST">
+            
+			<option value="RCT w direct/indirect restoration">RCT w direct restoration</option>
+			<option value="RCT w direct/indirect restoration">RCT w indirect restoration</option>
+			<option value="> Extraction w removable/fixed prothesis">> Extraction w fixed prothesis</option>
+			<option value="> Extraction w removable/fixed prothesis">> Extraction w removable prothesis</option>
+
+			</select> <br>
+<br>
+
+
+<input type="Checkbox" id="E22Checkbox" class="TEST" > Advantages & disadvantages of each Tx option were discussed with patient, written information sheets provided. <br>
+							  
+
+<input type="Checkbox" id="E23Checkbox" class="TEST" >The patient understood the advantages, risks, as well as the cost involved in RCT, including the need for multiple visits, and consented for RCT. <br><br>
+							  
+<input type="Checkbox" id="E24Checkbox" class="TEST">Post-endodontic restorative options discussed: <br>
+							  
+<input type="Checkbox" id="E25Checkbox" class="TEST" >1) Bonded composite 
+
+							  <select id="E25Dropdown"  class="TEST">
+            
+			<option value="short-term resto for posterior teeth)">short-term resto for posterior teeth)</option>	
+								  <option value="(anterior tooth w sufficient remaining tooth structure">(anterior tooth w sufficient remaining tooth structure)</option>	
+							  </select>
+		<br>
+<input type="Checkbox" id="E26Checkbox" class="TEST" > 2) Crown 
+
+							  <select id="E26Dropdown"  class="TEST">
+            
+			<option value="(anterior w extensive proximal caries/resto">(anterior w extensive proximal caries/resto)</option>	
+			 <option value="(posterior for cuspal coverage against occlusal forces)">(posterior for cuspal coverage against occlusal forces)</option>	
+						</select>	  
+							  
+							  <br><br>  
+<input type="Checkbox" id="E27Checkbox" class="TEST" > Pt understood that the type of final restoration recommended after RCT will be determined by the amount of tooth structure remaining after removal of existing restoration & caries & that a post may be indicated to retain the core.
+<br><br>
+
+
+<input type="Checkbox" id="E28Checkbox" class="TEST">TX PLAN<br>
+
+
+<input type="Checkbox" id="E29Checkbox" class="TEST">Endodontic: 
+<input type="text" id="B29TextInput" class="TEST" placeholder="Enter details..."><br>
+							  
+<input type="Checkbox" id="E30Checkbox" class="TEST"> Periodontal: 
+<input type="text" id="E30TextInput" class="TEST" placeholder="Enter details..."><br>
+
+<input type="Checkbox" id="E31Checkbox" class="TEST">Restorative: 
+ <input type="text" id="E31TextInput" class="TEST" placeholder="Posterior teeth with RCT should receive cuspal coverage restorations. ">
+<br><br>
+
+	
+	
 	
 	
 	<input type="Checkbox" id="endo1G22Checkbox" class="TEST"> Pt well on discharge <br>
@@ -580,22 +785,213 @@
  <input type="Checkbox" id="endo1nvCheckbox" class="TEST"> N/V:
     <input type="text" id="endo1nvTextInput" class="TEST" placeholder="Enter details..."> <br>
 	</div> <br>
-<button class="toggle-button" onclick="toggleSection('EndocmSection')">Endo Chemo-mechanical Prep</button>
-<input type="Checkbox" id="I1Checkbox" class="TEST"> Select All
+
+	<button class="toggle-button2" onclick="toggleSection('endo2Section')">414	Pulpotomy</button>
+<input type="Checkbox" id="endo2allCheckbox" class="TEST"> Select All
       
-<div id="EndocmSection" class="section">
-<h2>Endo </h2>
+  
+<div id="endo2Section" class="section"> 
+	<h3>Endo 1</h3>
+	
+	
+	<input type="Checkbox" id="ptendo2Checkbox" class="TEST"> Pt. presented to
+        <select id="endo2yearDropdown"  class="TEST">
+     
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+            <option value="5th Year">5th Year</option>
+        </select>
+        <select id="endo2clinicDropdown"  class="TEST">
+            <option value="Pros Clinic">Pros Clinic</option>
+            <option value="Perio Clinic">Perio Clinic</option>
+			 <option value="GDP Clinic">GDP Clinic</option>
+        </select>
+        <select id="endo2codeDropdown"  class="TEST">
+			  <option value="5.1">5.1</option>
+            <option value="5.2">5.2</option>
+			<option value="2.1">2.1</option>
+			<option value="3.1">3.1</option>
+			<option value="3.2">3.2</option>
+            <option value="3.3">3.3</option>
+            <option value="3.4">3.4</option>
+			<option value="4.1">4.1</option>
+			<option value="4.2">4.2</option>
+          			<option value="6.2">6.2</option>
+			<option value="6.3">6.3</option>
+        </select>
+        for
+        <select id="endo2typeDropdown"  class="TEST">
+			<option value="F/F 2ndary Impression"> 2ndary Impression</option>
+            <option value="011">011</option>
+            <option value="S/C">S/C</option>
+            <option value="Consult">Consult</option>
+        </select>
+		OR
+		<input type="text" id="endo2A1TextInput" class="TEST" placeholder="Enter details..."> <br>
+        <input type="Checkbox" id="endo2c3sCheckbox" class="TEST"> 3C’s confirmed
+		<input type="text" id="endo2c3sTextInput" class="TEST" placeholder="Enter details..."> <br>
+
+        <input type="Checkbox" id="endo2colgateCheckbox" class="TEST"> Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+       
+        <input type="Checkbox" id="endo2medicalHxCheckbox" class="TEST"> Medical Hx
+        <select id="endo2hxDropdown"  class="TEST">
+            <option value="updated">Updated</option>
+            <option value="verified">Verified</option>
+             <option value="taken">taken</option>
+		</select> <br><br>
+	
+	
+	
+	
+	<input type="Checkbox" id="endo2G22Checkbox" class="TEST"> Pt well on discharge <br>
+	<input type="Checkbox" id="endo2supervisorCheckbox" > Supervisor: Dr
+    <input type="text" id="endo2supervisornameTextInput" placeholder="Enter details..."> <br>
+	
+ <input type="Checkbox" id="endo2nvCheckbox" class="TEST"> N/V:
+    <input type="text" id="endo2nvTextInput" class="TEST" placeholder="Enter details..."> <br>
+	</div>
+	
+
+
+
+	
+	<button class="toggle-button2" onclick="toggleSection('endo3Section')">415	Complete chemo-mechanical preparation of root canal – one canal</button>
+<input type="Checkbox" id="endo3allCheckbox" class="TEST"> Select All
+      
+  
+<div id="endo3Section" class="section"> 
+	<h3>Endo 1</h3>
+	
+	
+	<input type="Checkbox" id="ptendo3Checkbox" class="TEST"> Pt. presented to
+        <select id="endo3yearDropdown"  class="TEST">
+     
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+            <option value="5th Year">5th Year</option>
+        </select>
+        <select id="endo3clinicDropdown"  class="TEST">
+            <option value="Pros Clinic">Pros Clinic</option>
+            <option value="Perio Clinic">Perio Clinic</option>
+			 <option value="GDP Clinic">GDP Clinic</option>
+        </select>
+        <select id="endo3codeDropdown"  class="TEST">
+			  <option value="5.1">5.1</option>
+            <option value="5.2">5.2</option>
+			<option value="2.1">2.1</option>
+			<option value="3.1">3.1</option>
+			<option value="3.2">3.2</option>
+            <option value="3.3">3.3</option>
+            <option value="3.4">3.4</option>
+			<option value="4.1">4.1</option>
+			<option value="4.2">4.2</option>
+          			<option value="6.2">6.2</option>
+			<option value="6.3">6.3</option>
+        </select>
+        for
+        <select id="endo3typeDropdown"  class="TEST">
+			<option value="F/F 2ndary Impression"> 2ndary Impression</option>
+            <option value="011">011</option>
+            <option value="S/C">S/C</option>
+            <option value="Consult">Consult</option>
+        </select>
+		OR
+		<input type="text" id="endo3A1TextInput" class="TEST" placeholder="Enter details..."> <br>
+        <input type="Checkbox" id="endo3c3sCheckbox" class="TEST"> 3C’s confirmed
+		<input type="text" id="endo3c3sTextInput" class="TEST" placeholder="Enter details..."> <br>
+
+        <input type="Checkbox" id="endo3colgateCheckbox" class="TEST"> Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+       
+        <input type="Checkbox" id="endo3medicalHxCheckbox" class="TEST"> Medical Hx
+        <select id="endo3hxDropdown"  class="TEST">
+            <option value="updated">Updated</option>
+            <option value="verified">Verified</option>
+             <option value="taken">taken</option>
+		</select> <br><br>
+	
+	
+	
+	
+	<input type="Checkbox" id="endo3G22Checkbox" class="TEST"> Pt well on discharge <br>
+	<input type="Checkbox" id="endo3supervisorCheckbox" > Supervisor: Dr
+    <input type="text" id="endo3supervisornameTextInput" placeholder="Enter details..."> <br>
+	
+ <input type="Checkbox" id="endo3nvCheckbox" class="TEST"> N/V:
+    <input type="text" id="endo3nvTextInput" class="TEST" placeholder="Enter details..."> <br>
+	</div>
+	
+
+	
+	  
+	
+	<button class="toggle-button2" onclick="toggleSection('endo4Section')">417 Root canal obturation – one canal</button>
+<input type="Checkbox" id="endo4allCheckbox" class="TEST"> Select All
+      
+  
+<div id="endo4Section" class="section"> 
+	<h3>Endo 1</h3>
+	
+	
+	<input type="Checkbox" id="ptendo4Checkbox" class="TEST"> Pt. presented to
+        <select id="endo4yearDropdown"  class="TEST">
+     
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+            <option value="5th Year">5th Year</option>
+        </select>
+        <select id="endo4clinicDropdown"  class="TEST">
+            <option value="Pros Clinic">Pros Clinic</option>
+            <option value="Perio Clinic">Perio Clinic</option>
+			 <option value="GDP Clinic">GDP Clinic</option>
+        </select>
+        <select id="endo4codeDropdown"  class="TEST">
+			  <option value="5.1">5.1</option>
+            <option value="5.2">5.2</option>
+			<option value="2.1">2.1</option>
+			<option value="3.1">3.1</option>
+			<option value="3.2">3.2</option>
+            <option value="3.3">3.3</option>
+            <option value="3.4">3.4</option>
+			<option value="4.1">4.1</option>
+			<option value="4.2">4.2</option>
+          			<option value="6.2">6.2</option>
+			<option value="6.3">6.3</option>
+        </select>
+        for
+        <select id="endo4typeDropdown"  class="TEST">
+			<option value="F/F 2ndary Impression"> 2ndary Impression</option>
+            <option value="011">011</option>
+            <option value="S/C">S/C</option>
+            <option value="Consult">Consult</option>
+        </select>
+		OR
+		<input type="text" id="endo4A1TextInput" class="TEST" placeholder="Enter details..."> <br>
+        <input type="Checkbox" id="endo4c3sCheckbox" class="TEST"> 3C’s confirmed
+		<input type="text" id="endo4c3sTextInput" class="TEST" placeholder="Enter details..."> <br>
+
+        <input type="Checkbox" id="endo4colgateCheckbox" class="TEST"> Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+       
+        <input type="Checkbox" id="endo4medicalHxCheckbox" class="TEST"> Medical Hx
+        <select id="endo4hxDropdown"  class="TEST">
+            <option value="updated">Updated</option>
+            <option value="verified">Verified</option>
+             <option value="taken">taken</option>
+		</select> <br><br>
+	
+	
+	
+	
+	<input type="Checkbox" id="endo4G22Checkbox" class="TEST"> Pt well on discharge <br>
+	<input type="Checkbox" id="endo4supervisorCheckbox" > Supervisor: Dr
+    <input type="text" id="endo4supervisornameTextInput" placeholder="Enter details..."> <br>
+	
+ <input type="Checkbox" id="endo4nvCheckbox" class="TEST"> N/V:
+    <input type="text" id="endo4nvTextInput" class="TEST" placeholder="Enter details..."> <br>
+	</div>
+	  	
 
  
-</div> <br>
-<button class="toggle-button" onclick="toggleSection('EndoobSection')">Endo Obturation</button>
-<input type="Checkbox" id="J1Checkbox" class="TEST"> Select All
-      
-<div id="EndoobSection" class="section">
-<h2>Endo Obturation</h2>
 
- 
-</div> 
 			
 			
 		<hr>
@@ -1942,1570 +2338,4 @@ stages of a denture)<br>
 		
 	</div>
 	</div>
-		 
-
-
-	  
-<script>
-	
-	
-
-	function getElementsWithClass(TEST) {
-    const elements = {};
-    document.querySelectorAll(`.${TEST}`).forEach(element => {
-        elements[element.id] = element;
-    });
-    return elements;
-}
-
-// Use the function to get all elements with the "auto-element" class
-const autoElements = getElementsWithClass('TEST');	
-	
-	
-    // Get references to HTML elements
-   	const ptCheckbox = document.getElementById('ptCheckbox');
-    const yearDropdown = document.getElementById('yearDropdown');
-    const clinicDropdown = document.getElementById('clinicDropdown');
-    const codeDropdown = document.getElementById('codeDropdown');
-    const typeDropdown = document.getElementById('typeDropdown');
-    const colgateCheckbox = document.getElementById('colgateCheckbox');
-    const c3sCheckbox = document.getElementById('c3sCheckbox');
-    const medicalHxCheckbox = document.getElementById('medicalHxCheckbox');
-    const hxDropdown = document.getElementById('hxDropdown');
-    const htpsrCheckbox = document.getElementById('htpsrCheckbox');
-    const opgCheckbox = document.getElementById('opgCheckbox');
-    const restoCheckbox = document.getElementById('restoCheckbox');
-    const bwCheckbox = document.getElementById('bwCheckbox');
-    const xylocaineCheckbox = document.getElementById('xylocaineCheckbox');
-    const latypeCheckbox = document.getElementById('latypeCheckbox');
-    const anestheticDropdown = document.getElementById('anestheticDropdown');
-    const infilDropdown = document.getElementById('infilDropdown');
-    const isolationCheckbox = document.getElementById('isolationCheckbox');
-    const isolationDropdown = document.getElementById('isolationDropdown');
-    const cavityCheckbox = document.getElementById('cavityCheckbox');
-    const etchedCheckbox = document.getElementById('etchedCheckbox');
-    const gradiaDropdown = document.getElementById('gradiaDropdown');
-    const consentsCheckbox = document.getElementById('consentsCheckbox');
-    const debridementCheckbox = document.getElementById('debridementCheckbox');
-    const refinementCheckbox = document.getElementById('refinementCheckbox');
-    const prophyCheckbox = document.getElementById('prophyCheckbox');
-    const ohiCheckbox = document.getElementById('ohiCheckbox');
-    const supervisorCheckbox = document.getElementById('supervisorCheckbox');
-    const nvCheckbox = document.getElementById('nvCheckbox');
-    const generatedText = document.getElementById('generatedText');
-    const c3sTextInput = document.getElementById('c3sTextInput'); // Add this line
-    const supervisorNameTextInput = document.getElementById('supervisornameTextInput');
-	const A1TextInput = document.getElementById('A1TextInput');
-	const selectAllRestoCheckbox = document.getElementById('selectAllRestoCheckbox');
-	const B1 = document.getElementById('B1Checkbox');
-	const selectSpecificRestoCheckbox = document.getElementById('selectSpecificSCCheckbox');
-	
- 
-	
-
-	
-
-	addEventListener('change', generateText);
-	addEventListener('input', generateText);
-
-	
-	
-	B11Checkbox.addEventListener('change', toggleSubCheckboxes); // here 
-	B12Checkbox.addEventListener('change', toggleSubCheckboxes); 
-	B100Checkbox.addEventListener('change', toggleSubCheckboxes); 
-	selectSpecificRestoCheckbox.addEventListener('change', toggleSubCheckboxes); 
-	B105Checkbox.addEventListener('change', toggleSubCheckboxes);
-	B25Checkbox.addEventListener('change', toggleSubCheckboxes); 
-	selectAllRestoCheckbox.addEventListener('change', toggleSubCheckboxes);
-	selectAllResto2Checkbox.addEventListener('change', toggleSubCheckboxes);
-	G156Checkbox.addEventListener('change', toggleSubCheckboxes);
-   //F/F
-	ff1allCheckbox.addEventListener('change', toggleSubCheckboxes);
-	ff2allCheckbox.addEventListener('change', toggleSubCheckboxes);
-	ff3allCheckbox.addEventListener('change', toggleSubCheckboxes);
-	ff4allCheckbox.addEventListener('change', toggleSubCheckboxes);
-	ff6allCheckbox.addEventListener('change', toggleSubCheckboxes);
-
-	
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    toggleSubCheckboxes('B100Checkbox', ['B3Checkbox', 'B4Checkbox', 'B5Checkbox', 'B6Checkbox', 'B7Checkbox', 'B8Checkbox', 'B9Checkbox', 'B10Checkbox', 'B25Checkbox']);
-});
-
-function toggleSubCheckboxes(sourceCheckboxId, targetCheckboxIds) {
-    const sourceCheckbox = document.getElementById(sourceCheckboxId);
-
-    if (sourceCheckbox) {
-        const isChecked = sourceCheckbox.checked;
-
-        targetCheckboxIds.forEach(targetId => {
-            const targetCheckbox = document.getElementById(targetId);
-            if (targetCheckbox) {
-                targetCheckbox.checked = isChecked;
-            }
-        });
-    }
-}
-
-	
-
-
-function toggleSubCheckboxes() {
-        // Check or uncheck checkboxes B3, B4, B5, B6 based on B11Checkbox state
-     B3Checkbox.checked = B100Checkbox.checked;
-        B4Checkbox.checked = B100Checkbox.checked;
-        B5Checkbox.checked = B100Checkbox.checked;
-        B6Checkbox.checked = B100Checkbox.checked;
-		B7Checkbox.checked = B100Checkbox.checked;
-		B8Checkbox.checked = B100Checkbox.checked;
-		B9Checkbox.checked = B100Checkbox.checked;
-		B10Checkbox.checked = B100Checkbox.checked;
-		B25Checkbox.checked = B100Checkbox.checked;
-		B13Checkbox.checked = B100Checkbox.checked;
-		B14Checkbox.checked = B100Checkbox.checked;
-		B15Checkbox.checked = B100Checkbox.checked;
-		B16Checkbox.checked = B100Checkbox.checked;
-		B17Checkbox.checked = B100Checkbox.checked;
-		B17Checkbox.checked = B100Checkbox.checked;
-		B117Checkbox.checked = B100Checkbox.checked;
-		B31Checkbox.checked = B100Checkbox.checked;
-		B32Checkbox.checked = B100Checkbox.checked;
-		B33Checkbox.checked = B100Checkbox.checked;
-		B34Checkbox.checked = B100Checkbox.checked;
-		B35Checkbox.checked = B100Checkbox.checked;
-		B36Checkbox.checked = B100Checkbox.checked;
-		htpsrCheckbox.checked = B100Checkbox.checked;
-		opgCheckbox.checked = B100Checkbox.checked;
-		B18Checkbox.checked = B100Checkbox.checked;
-		B1Checkbox.checked = B100Checkbox.checked;
-		B2Checkbox.checked = B100Checkbox.checked;
-		B105Checkbox.checked = B100Checkbox.checked;
-	ptCheckbox.checked = B100Checkbox.checked;
-	c3sCheckbox.checked = B100Checkbox.checked;
-	colgateCheckbox.checked = B100Checkbox.checked;
-	medicalHxCheckbox.checked = B100Checkbox.checked;
-	supervisorCheckbox.checked = B100Checkbox.checked;
-	nvCheckbox.checked = B100Checkbox.checked;
-	radioCheckbox.checked = B100Checkbox.checked;
-
-	
-	 ptff1Checkbox.checked = ff1allCheckbox.checked;
- ff1c3sCheckbox.checked = ff1allCheckbox.checked;
- ff1colgateCheckbox.checked = ff1allCheckbox.checked;
-ff1medicalHxCheckbox.checked = ff1allCheckbox.checked;
- G13Checkbox.checked = ff1allCheckbox.checked;
- G13aCheckbox1.checked = ff1allCheckbox.checked;
- G14Checkbox.checked = ff1allCheckbox.checked;
-	 G6Checkbox.checked = ff1allCheckbox.checked;
-	 G7Checkbox.checked = ff1allCheckbox.checked;
-	 G8Checkbox.checked = ff1allCheckbox.checked;
-	 G10ACheckbox.checked = ff1allCheckbox.checked;
-	 G11Checkbox.checked = ff1allCheckbox.checked;
-	
-	 G15Checkbox.checked = ff1allCheckbox.checked;
-	 G16Checkbox.checked = ff1allCheckbox.checked;
-
-	
-	
-	 
-	ptff2Checkbox.checked = ff2allCheckbox.checked;
- ff2c3sCheckbox.checked = ff2allCheckbox.checked;
- ff2colgateCheckbox.checked = ff2allCheckbox.checked;
-ff2medicalHxCheckbox.checked = ff2allCheckbox.checked;
- G22Checkbox.checked = ff2allCheckbox.checked;
- ff2supervisorCheckbox.checked = ff2allCheckbox.checked;
- G23Checkbox.checked = ff2allCheckbox.checked;
-		G18Checkbox.checked = ff2allCheckbox.checked;
-	G19Checkbox.checked = ff2allCheckbox.checked;
-	G20Checkbox.checked = ff2allCheckbox.checked;
-G21Checkbox.checked = ff2allCheckbox.checked;
-G22Checkbox.checked = ff2allCheckbox.checked;
-	G24Checkbox.checked = ff2allCheckbox.checked;
-	G25Checkbox.checked = ff2allCheckbox.checked;
-
-	
-	
-	 ptff3Checkbox.checked = ff3allCheckbox.checked;
- ff3c3sCheckbox.checked = ff3allCheckbox.checked;
- ff3colgateCheckbox.checked = ff3allCheckbox.checked;
-ff3medicalHxCheckbox.checked = ff3allCheckbox.checked;
- ff3G22Checkbox.checked = ff3allCheckbox.checked;
- ff3supervisorCheckbox.checked = ff3allCheckbox.checked;
- ff3G23Checkbox.checked = ff3allCheckbox.checked;
-	 G30Checkbox.checked = ff3allCheckbox.checked;
-	G31Checkbox.checked = ff3allCheckbox.checked;
-	G32Checkbox.checked = ff3allCheckbox.checked;
-	G33Checkbox.checked = ff3allCheckbox.checked;
-	G34Checkbox.checked = ff3allCheckbox.checked;
-	G35Checkbox.checked = ff3allCheckbox.checked;
-	G38Checkbox.checked = ff3allCheckbox.checked;
-	
-	 ptff4Checkbox.checked = ff4allCheckbox.checked;
- ff4c3sCheckbox.checked = ff4allCheckbox.checked;
- ff4colgateCheckbox.checked = ff4allCheckbox.checked;
-ff4medicalHxCheckbox.checked = ff4allCheckbox.checked;
- ff4G22Checkbox.checked = ff4allCheckbox.checked;
- ff4supervisorCheckbox.checked = ff4allCheckbox.checked;
- ff4G23Checkbox.checked = ff4allCheckbox.checked;
-	G49Checkbox.checked = ff4allCheckbox.checked;
-	G50Checkbox.checked = ff4allCheckbox.checked;
-	G51Checkbox.checked = ff4allCheckbox.checked;
-	G52Checkbox.checked = ff4allCheckbox.checked;
-	G54Checkbox.checked = ff4allCheckbox.checked;
- 
-	
-	 ptff5Checkbox.checked = G156Checkbox.checked;
- ff5c3sCheckbox.checked = G156Checkbox.checked;
- ff5colgateCheckbox.checked = G156Checkbox.checked;
-ff5medicalHxCheckbox.checked = G156Checkbox.checked;
- ff5G22Checkbox.checked = G156Checkbox.checked;
- ff5supervisorCheckbox.checked = G156Checkbox.checked;
- ff5G23Checkbox.checked = G156Checkbox.checked;
-	G41Checkbox.checked = G156Checkbox.checked;
-	G42Checkbox.checked = G156Checkbox.checked;
-	G43Checkbox.checked = G156Checkbox.checked;
-	G44Checkbox.checked = G156Checkbox.checked;
- 
-	
-	 ptff6Checkbox.checked = ff6allCheckbox.checked;
- ff6c3sCheckbox.checked = ff6allCheckbox.checked;
- ff6colgateCheckbox.checked = ff6allCheckbox.checked;
-ff6medicalHxCheckbox.checked = ff6allCheckbox.checked;
- ff6G22Checkbox.checked = ff6allCheckbox.checked;
- ff6supervisorCheckbox.checked = ff6allCheckbox.checked;
- ff6G23Checkbox.checked = ff6allCheckbox.checked;
-	G55Checkbox.checked = ff6allCheckbox.checked;
-	G56Checkbox.checked = ff6allCheckbox.checked;
- 
-	
-	
-	restoCheckbox.checked = selectAllRestoCheckbox.checked;
-	bwCheckbox.checked = selectAllRestoCheckbox.checked;
-	xylocaineCheckbox.checked = selectAllRestoCheckbox.checked;
-	latypeCheckbox.checked = selectAllRestoCheckbox.checked;
-	isolationCheckbox.checked = selectAllRestoCheckbox.checked;
-	cavityCheckbox.checked = selectAllRestoCheckbox.checked;
-	C12Checkbox.checked = selectAllRestoCheckbox.checked;
-	etchedCheckbox.checked = selectAllRestoCheckbox.checked;
-	C11Checkbox.checked = selectAllRestoCheckbox.checked;
-
-	
-	C110Checkbox.checked = selectAllResto2Checkbox.checked;
-	C111Checkbox.checked = selectAllResto2Checkbox.checked;
-	
-	
-	// S/C section
-	consentsCheckbox.checked = selectSpecificRestoCheckbox.checked;
-	debridementCheckbox.checked = selectSpecificRestoCheckbox.checked;
-	refinementCheckbox.checked = selectSpecificRestoCheckbox.checked;
-	prophyCheckbox.checked = selectSpecificRestoCheckbox.checked;
-	ohiCheckbox.checked = selectSpecificRestoCheckbox.checked;
-	
-		B30Checkbox.checked = B105Checkbox.checked;
-		B31Checkbox.checked = B105Checkbox.checked;
-		B32Checkbox.checked = B105Checkbox.checked;
-		B33Checkbox.checked = B105Checkbox.checked;
-		B34Checkbox.checked = B105Checkbox.checked;
-		B35Checkbox.checked = B105Checkbox.checked;
-		B36Checkbox.checked = B105Checkbox.checked;
-		
-        // Trigger the generateText function after changing the checkboxes
-        generateText();
-    }
-    
-	
-	
-    // Function to generate text based on selected options
- function generateText() {
-    const text = [];
- 
-    // 011 Intro
-    if (ptCheckbox.checked) {
-        const A1TextInputValue = A1TextInput.value;
-        const presentationText = `Pt. presented to ${yearDropdown.value} ${clinicDropdown.value} ${codeDropdown.value} for ${typeDropdown.value}`;
-
-        if (A1TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`${presentationText} ${A1TextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push(presentationText);
-        }
-    }
-	 	 if (c3sCheckbox.checked) {
-        const c3sTextInputValue = c3sTextInput.value;
-        if (c3sTextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`3C’s confirmed - ${c3sTextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push('3C’s confirmed');
-        }}
-	 
-	 if (colgateCheckbox.checked) {
-        text.push('\n');
-        text.push('Colgate 1.5% Hydrogen Peroxide Mouth rinse given.'); }
-	  if (medicalHxCheckbox.checked) {
-        text.push('\n');
-        text.push(`Medical Hx ${hxDropdown.value}`);
-		text.push('\n'); }
-	 
-		
-	 
-	 //F/F Primary
-		 if (ptff1Checkbox.checked) {
-        const ff1A1TextInputValue = ff1A1TextInput.value;
-        const ff1presentationText = `Pt. presented to ${ff1yearDropdown.value} ${ff1clinicDropdown.value} ${ff1codeDropdown.value} for ${ff1typeDropdown.value}`;
-
-        if (ff1A1TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`${ff1presentationText} ${ff1A1TextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push(ff1presentationText);
-        }
-    }
-		
- if (ff1c3sCheckbox.checked) {
-               text.push('\n');
-            text.push('3C’s confirmed');}   
-		
-		 if (ff1colgateCheckbox.checked) {
-        text.push('\n');
-        text.push('Colgate 1.5% Hydrogen Peroxide Mouth rinse given.');
-    }
-  
-		  if (ff1medicalHxCheckbox.checked) {
-        text.push('\n');
-        text.push(`Medical Hx ${ff1hxDropdown.value}`);
-		text.push('\n');
-    }
-	 
-	 
-	 // F/F Seconday Intro
-	  	 if (ptff2Checkbox.checked) {
-        const ff2A1TextInputValue = ff2A1TextInput.value;
-        const ff2presentationText = `Pt. presented to ${ff2yearDropdown.value} ${ff2clinicDropdown.value} ${ff2codeDropdown.value} for ${ff2typeDropdown.value}`;
-
-        if (ff2A1TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`${ff2presentationText} ${ff2A1TextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push(ff2presentationText);
-        }
-    }
-	  if (ff2c3sCheckbox.checked) {
-        const ff2c3sTextInputValue = ff2c3sTextInput.value;
-        if (ff2c3sTextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`3C’s confirmed - ${ff2c3sTextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push('3C’s confirmed'); }}
-	 
-	 if (ff2colgateCheckbox.checked) {
-        text.push('\n');
-        text.push('Colgate 1.5% Hydrogen Peroxide Mouth rinse given.'); }
-	  if (ff2medicalHxCheckbox.checked) {
-        text.push('\n');
-        text.push(`Medical Hx ${ff2hxDropdown.value}`);
-		text.push('\n');
-    }
-	 
-	 //F/F Jaw Reg Intro
-	  if (ptff3Checkbox.checked) {
-        const ff3A1TextInputValue = ff3A1TextInput.value;
-        const presentationText = `Pt. presented to ${ff3yearDropdown.value} ${ff3clinicDropdown.value} ${ff3codeDropdown.value} for ${ff3typeDropdown.value}`;
-
-        if (ff3A1TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`${presentationText} ${ff3A1TextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push(presentationText);
-        }
-    }
-	  if (ff3c3sCheckbox.checked) {
-        const ff3c3sTextInputValue = ff3c3sTextInput.value;
-        if (ff3c3sTextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`3C’s confirmed - ${ff3c3sTextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push('3C’s confirmed'); }}
-	 
-	 if (ff3colgateCheckbox.checked) {
-        text.push('\n');
-        text.push('Colgate 1.5% Hydrogen Peroxide Mouth rinse given.'); }
-	  if (ff3medicalHxCheckbox.checked) {
-        text.push('\n');
-        text.push(`Medical Hx ${ff3hxDropdown.value}`);
-		text.push('\n');
-    }
-	
-	 
-	 //F/F Insertion Intro 
-	  if (ptff5Checkbox.checked) {
-        const ff5A1TextInputValue = ff5A1TextInput.value;
-        const presentationText = `Pt. presented to ${ff5yearDropdown.value} ${ff5clinicDropdown.value} ${ff5codeDropdown.value} for ${ff5typeDropdown.value}`;
-
-        if (ff5A1TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`${presentationText} ${ff5A1TextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push(presentationText);
-        }
-    }
-	  if (ff5c3sCheckbox.checked) {
-        const ff5c3sTextInputValue = ff5c3sTextInput.value;
-        if (ff5c3sTextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`3C’s confirmed - ${ff5c3sTextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push('3C’s confirmed'); }}
-	 
-	 if (ff5colgateCheckbox.checked) {
-        text.push('\n');
-        text.push('Colgate 1.5% Hydrogen Peroxide Mouth rinse given.'); }
-	  if (ff5medicalHxCheckbox.checked) {
-        text.push('\n');
-        text.push(`Medical Hx ${ff5hxDropdown.value}`);
-		text.push('\n');
-    }
-
-
-
-	 
-	 // F/F Teeth Try in Intro 
-	  if (ptff4Checkbox.checked) {
-        const ff4A1TextInputValue = ff4A1TextInput.value;
-        const presentationText = `Pt. presented to ${ff4yearDropdown.value} ${ff4clinicDropdown.value} ${ff4codeDropdown.value} for ${ff4typeDropdown.value}`;
-
-        if (ff4A1TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`${presentationText} ${ff4A1TextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push(presentationText);
-        }
-    }
-	  if (ff4c3sCheckbox.checked) {
-        const ff4c3sTextInputValue = ff4c3sTextInput.value;
-        if (ff4c3sTextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`3C’s confirmed - ${ff4c3sTextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push('3C’s confirmed'); }}
-	 
-	 if (ff4colgateCheckbox.checked) {
-        text.push('\n');
-        text.push('Colgate 1.5% Hydrogen Peroxide Mouth rinse given.'); }
-	  if (ff4medicalHxCheckbox.checked) {
-        text.push('\n');
-        text.push(`Medical Hx ${ff4hxDropdown.value}`);
-		text.push('\n');
-    }
-
-	 
-	 // F/F Review Intro
-	 
-	  if (ptff6Checkbox.checked) {
-        const ff6a1TextInputValue = ff6A1TextInput.value;
-        const presentationText = `Pt. presented to ${ff6yearDropdown.value} ${ff6clinicDropdown.value} ${ff6codeDropdown.value} for ${ff6typeDropdown.value}`;
-
-        if (ff6a1TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`${presentationText} ${ff6A1TextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push(presentationText);
-        }
-    }
-	  if (ff6c3sCheckbox.checked) {
-        const ff6c3sTextInputValue = ff6c3sTextInput.value;
-        if (ff6c3sTextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`3C’s confirmed - ${ff6c3sTextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push('3C’s confirmed'); }}
-	 
-	 if (ff6colgateCheckbox.checked) {
-        text.push('\n');
-        text.push('Colgate 1.5% Hydrogen Peroxide Mouth rinse given.'); }
-	  if (ff6medicalHxCheckbox.checked) {
-        text.push('\n');
-        text.push(`Medical Hx ${ff6hxDropdown.value}`);
-		text.push('\n');
-    }
-	 //Endo 1 Intro
-	   	 if (ptendo1Checkbox.checked) {
-        const endo1A1TextInputValue = endo1A1TextInput.value;
-        const endo1presentationText = `Pt. presented to ${endo1yearDropdown.value} ${endo1clinicDropdown.value} ${endo1codeDropdown.value} for ${endo1typeDropdown.value}`;
-
-        if (endo1A1TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`${endo1presentationText} ${endo1A1TextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push(endo1presentationText);
-        }
-    }
-	  if (endo1c3sCheckbox.checked) {
-        const endo1c3sTextInputValue = endo1c3sTextInput.value;
-        if (endo1c3sTextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`3C’s confirmed - ${endo1c3sTextInputValue}`);
-        } else {
-            text.push('\n');
-            text.push('3C’s confirmed'); }}
-	 
-	 if (endo1colgateCheckbox.checked) {
-        text.push('\n');
-        text.push('Colgate 1.5% Hydrogen Peroxide Mouth rinse given.'); }
-	  if (endo1medicalHxCheckbox.checked) {
-        text.push('\n');
-        text.push(`Medical Hx ${endo1hxDropdown.value}`);
-		text.push('\n');
-    }
-	 
-	 
-	 // 011 Body
-    if (B1Checkbox.checked) {
-        const B1TextInputValue = B1TextInput.value;
-        if (B1TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`RFV: ${B1TextInputValue}`);
-        } else {
-            text.push('');
-        }
-    }
-		
-
-    if (B2Checkbox.checked) {
-        const B2TextInputValue = B2TextInput.value;
-        if (B2TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`CC: ${B2TextInputValue}`);
-			text.push('\n');
-        } else {
-            text.push('');
-
-        }
-    }
-		
-		if (B30Checkbox.checked) {
-        const B30TextInputValue = B30TextInput.value;
-        if (B30TextInputValue.trim() !== '') {
-            text.push('\n');
-			text.push('Hx of Present Complaint');
-			text.push('\n');
-            text.push(`Site: ${B30TextInputValue}`);
-        } else {
-             text.push('');
-        }
-    }
-		if (B31Checkbox.checked) {
-        const B31TextInputValue = B31TextInput.value;
-        if (B31TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`Onset: ${B31TextInputValue}`);
-        } else {
-             text.push('');;
-        }
-    }
-		if (B32Checkbox.checked) {
-        const B32TextInputValue = B32TextInput.value;
-        if (B32TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`Character: ${B32TextInputValue}`);
-        } else {
-            text.push('');
-        }
-    }
-		if (B33Checkbox.checked) {
-        const B33TextInputValue = B33TextInput.value;
-        if (B33TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`Radiation: ${B33TextInputValue}`);
-        } else {
-             text.push('');
-        }
-    }
-		if (B34Checkbox.checked) {
-        const B34TextInputValue = B34TextInput.value;
-        if (B34TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`Alleviating Factors: ${B34TextInputValue}`);
-        } else {
-           text.push('');
-        }
-    }
-		if (B35Checkbox.checked) {
-        const B35TextInputValue = B35TextInput.value;
-        if (B35TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`Exacerbating factors: ${B35TextInputValue}`);
-        } else {
-          text.push('');
-        }
-    }
-		if (B36Checkbox.checked) {
-        const B36TextInputValue = B36TextInput.value;
-        if (B36TextInputValue.trim() !== '') {
-            text.push('\n');
-            text.push(`Severity: ${B36TextInputValue}`);
-			text.push('\n');
-        } else {
-             text.push('');
-        }
-    }
-		
-		if (B3Checkbox.checked) {
-        text.push('\n\n');
-        text.push('E/O examination: ');
-    }
-		if (B4Checkbox.checked) {
-        text.push('Temporalis m.');
-    }
-		if (B5Checkbox.checked) {
-        text.push(', masseter m.');
-    }
-		if (B6Checkbox.checked) {
-        text.push(', TMJ');
-    }
-		if (B7Checkbox.checked) {
-        text.push(', salivary glands');
-    }
-		if (B8Checkbox.checked) {
-        text.push(', lymph nodes');
-    }
-		if (B9Checkbox.checked) {
-        text.push(', muscles of facial expression');
-    }
-		if (B10Checkbox.checked) {
-        text.push('- NAD.');
-    }
-		
-	if (B13Checkbox.checked) {
-		text.push('\n');
-        text.push('I/OE: ');
-    }
-		if (B14Checkbox.checked) {
-        text.push('FOM');
-    }
-		if (B15Checkbox.checked) {
-        text.push(', tongue');
-    }
-		if (B16Checkbox.checked) {
-        text.push(', buccal mucosa');
-    }
-		if (B17Checkbox.checked) {
-        text.push(', Palatal Mucosa');
-    }
-		if (B117Checkbox.checked) {
-        text.push('- NAD.');
-			text.push('\n');
-    }
-
-		
-        if (htpsrCheckbox.checked) {
-			 text.push('\n');
-            text.push('Hard tissue & PSR – as charted in ISOH.');
-        }
-	 if (radioCheckbox.checked) {
-			 text.push('\n');
-            text.push(`${radioDropdown.value}`);
-			}
-	   
-	 if (B18CCheckbox.checked) {
-			 const B18CTextInputValue = B18CTextInput.value;
-        if (B18CTextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push('Main Findings:');
-			text.push(`${B18CTextInputValue}`);
-			
-        } else {
-			 text.push('');  
-           
-       
-    }
-}
-	 
-	 if (BW1Checkbox.checked) {
-			 const BW1TextInputValue = BW1TextInput.value;
-        if (BW1TextInputValue.trim() !== '') {
-             text.push('\n\n');
-            text.push('BW taken:');
-			text.push('\n');
-			text.push('Interproximal caries:');
-			text.push(`${BW1TextInputValue}`);
-			
-        } else {
-			 text.push('');  }}
-
-	   if (BW2Checkbox.checked) {
-			 const BW2TextInputValue = BW2TextInput.value;
-        if (BW2TextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Occlusal caries:');
-			text.push(`${BW2TextInputValue}`);
-			
-        } else {
-			 text.push('');   }}
-	   if (BW3Checkbox.checked) {
-			 const BW3TextInputValue = BW3TextInput.value;
-        if (BW3TextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Secondary caries:');
-			text.push(`${BW3TextInputValue}`);
-			
-        } else {
-			 text.push('');   }}
-	   if (BW4Checkbox.checked) {
-			 const BW4TextInputValue = BW4TextInput.value;
-        if (BW4TextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Bone level: ');
-			text.push(`${BW4TextInputValue}`);
-			
-        } else {
-			 text.push('');   }}
-	 
-	  if (BW5Checkbox.checked) {
-			 const BW5TextInputValue = BW5TextInput.value;
-        if (BW5TextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Calculus: ');
-			text.push(`${BW5TextInputValue}`);
-			
-        } else {
-			 text.push('');   }}
-	 
-	   if (BW6Checkbox.checked) {
-			 const BW6TextInputValue = BW6TextInput.value;
-        if (BW6TextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Restoration:');
-			text.push(`${BW6TextInputValue}`);
-			
-        } else {
-			 text.push('');   }}
-	  
-	 
-	   if (opg1Checkbox.checked) {
-			 const opg1TextInputValue = opg1TextInput.value;
-        if (opg1TextInputValue.trim() !== '') {
-             text.push('\n\n');
-            text.push('OPG taken');
-			text.push('\n');
-			text.push('Missing teeth:');
-			text.push(`${opg1TextInputValue}`);
-			
-        } else {
-			 text.push('');  }}
-
-	   if (opg2Checkbox.checked) {
-			 const opg2TextInputValue = opg2TextInput.value;
-        if (opg2TextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('8’s:');
-			text.push(`${opg2TextInputValue}`);
-			
-        } else {
-			 text.push('');   }}
-	   if (opg3Checkbox.checked) {
-			 const opg3TextInputValue = opg3TextInput.value;
-        if (opg3TextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Caries: ');
-			text.push(`${opg3TextInputValue}`);
-			
-        } else {
-			 text.push('');   }}
-	   if (opg4Checkbox.checked) {
-			 const opg4TextInputValue = opg4TextInput.value;
-        if (opg4TextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Restoration/dental work: ');
-			text.push(`${opg4TextInputValue}`);
-			
-        } else {
-			 text.push('');   }}
-	 
-	  if (opg5Checkbox.checked) {
-			 const opg5TextInputValue = opg5TextInput.value;
-        if (opg5TextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Bone level: ');
-			text.push(`${opg5TextInputValue}`);
-			
-        } else {
-			 text.push('');   }}
-	 
-	   if (opg6Checkbox.checked) {
-			 const opg6TextInputValue = opg6TextInput.value;
-        if (opg6TextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Mx sinus: ');
-			text.push(`${opg6TextInputValue}`);
-			
-        } else {
-			 text.push('');   }}
-	   if (opg7Checkbox.checked) {
-			 const opg7TextInputValue = opg7TextInput.value;
-        if (opg7TextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Condyles: ');
-			text.push(`${opg7TextInputValue}`);
-			
-        } else {
-			 text.push('');   }}
-	 
-	   if (opg8Checkbox.checked) {
-			 const opg8TextInputValue = opg8TextInput.value;
-        if (opg8TextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Ghost images: ');
-			text.push(`${opg8TextInputValue}`);
-			
-        } else {
-			 text.push('');   }}
-	 
-
-	 
-		
-	  if (B18Checkbox.checked) {
-			 const B18TextInputValue = B18TextInput.value;
-        if (B18TextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push('Provisional Tx: ');
-			text.push(`${B18TextInputValue}`);
-			
-        } else {
-			 text.push('');  
-            
-       
-    }
-}
-if (B19Checkbox.checked) {
-    const B19TextInputValue = B19TextInput.value;
-    if (B19TextInputValue.trim() !== '') {
-        text.push('\n\n');
-		text.push('Tx options discussed and presented to pt:');
-		text.push('\n');
-        text.push(`Systemic Phase: ${B19TextInputValue}`);
-      
-    } else {
-        text.push('');      
-    }
-}
-
-// For B20
-if (B20Checkbox.checked) {
-    const B20TextInputValue = B20TextInput.value;
-    if (B20TextInputValue.trim() !== '') {
-        text.push('\n');
-        text.push(`Acute Phase: ${B20TextInputValue}`);
-        
-    } else {
-             text.push('');   }}
-
-
-if (B21Checkbox.checked) {
-    const B21TextInputValue = B21TextInput.value;
-    if (B21TextInputValue.trim() !== '') {
-        text.push('\n');
-        text.push(`Disease Control: ${B21TextInputValue}`);
-       
-    } else {text.push('');   }}
-
-if (B22Checkbox.checked) {
-    const B22TextInputValue = B22TextInput.value;
-    if (B22TextInputValue.trim() !== '') {
-        text.push('\n');
-        text.push(`Definitive phase: ${B22TextInputValue}`);
-      
-    } else {
-             text.push('');  
-      
-    }
-}
-
-if (B23Checkbox.checked) {
-    const B23TextInputValue = B23TextInput.value;
-    if (B23TextInputValue.trim() !== '') {
-        text.push('\n');
-        text.push(`Maintenance phase: ${B23TextInputValue}`);
-      
-    } else {
-           text.push('');  
-        
-    }
-}
-
-
-
-if (B24Checkbox.checked) {
-    const B24TextInputValue = B24TextInput.value;
-    if (B24TextInputValue.trim() !== '') {
-        text.push('\n');
-        text.push(`Extra comment: ${B24TextInputValue}`);
-     
-    } else {
-             text.push('');  
-    
-    }
-}
-
-
-
-		
-
-    if (restoCheckbox.checked) {
-        text.push('\n');
-        text.push('Tooth - required restoration due to decay/NCTL/defective margin');
-    }
-
-    if (bwCheckbox.checked) {
-        text.push('\n');
-        text.push('BW’s reviewed');
-		
-    }
-        if (xylocaineCheckbox.checked) {
-			 text.push('\n\n');
-             text.push(`${laDropdown.value}`);
-        }
-        if (latypeCheckbox.checked) {
-			 text.push('\n');
-            text.push(`${anestheticDropdown.value} VIA ${infilDropdown.value}`);
-			text.push('\ n\n');
-        }
-        if (isolationCheckbox.checked) {
-			text.push('\n');
-            text.push(isolationDropdown.value);
-        }
-        if (cavityCheckbox.checked) {
-			 text.push('\n\n');
-            text.push(cavityCheckbox.value);
-			
-        }
-	 if (C12Checkbox.checked) {
-			 text.push('\n');
-            text.push(`${C12Dropdown.value}`);
-		}
-
-	 
-	   if (cordCheckbox.checked) {
-			 text.push('\n\n');
-		    text.push('Retraction Cord size ');
-            text.push(cordDropdown.value);
-		   text.push(' placed with hemostat');
-			
-        }
-        if (etchedCheckbox.checked) {
-			 text.push('\n\n');
-            text.push(`Etched with 37% phosphoric acid, clearfil primer and bond. Gradia ${gradiaDropdown.value} composite placed and cured.`);
-        }
-	 if (C110Checkbox.checked) {
-			 text.push('\n\n');
-            		text.push(`Dentine conditioned w 10% polyacrylic acid`);
-			}
-	 if (C111Checkbox.checked) {
-			 text.push('\n');
-            text.push(`Restored with ${GICDropdown.value}`);
-		 text.push(`${GICshadeDropdown.value} and cured`);
-			}
-	 if (C11Checkbox.checked) {
-			 text.push('\n\n');
-            		text.push(`Restoration polished, occlusion checked`);}
-	 
-	 
-        if (consentsCheckbox.checked) {
-			 text.push('\n\n');
-            text.push('Pt consents to S/C – informed of risks bleeding, post op sensitivity, natural gaps between teeth');
-        }
-        if (debridementCheckbox.checked) {
-			 text.push('\n');
-            text.push('Debridement of all quadrants using ultrasonic scaler');
-        }
-        if (refinementCheckbox.checked) {
-			 text.push('\n');
-            text.push('Refinement using hand scalers');
-        }
-        if (prophyCheckbox.checked) {
-			 text.push('\n\n');
-            text.push('Prophy and fluoride applied');
-        }
-        if (ohiCheckbox.checked) {
-			 text.push('\n\n');
-            text.push('OHI provided');
-        }
-  
-		
-    
-     if (G1Checkbox.checked) {
-			 const G1TextInputValue = G1TextInput.value;
-        if (G1TextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push(`Reason for tooth loss (years of edentulous): ${G1TextInputValue}`);
-			
-        } else {
-			 text.push(''); }}
-
-		    if (G2Checkbox.checked) {
-			 const G2TextInputValue = G2TextInput.value;
-        if (G2TextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push(`Patient’s responsibility in home care: ${G2TextInputValue}`);
-			
-        } else {
-			 text.push('');  
-          }
-}
-		    if (G3Checkbox.checked) {
-			 const G3TextInputValue = G3TextInput.value;
-        if (G3TextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push(`Hx & preference of existing & previous denture: ${G3TextInputValue}`);
-			
-        } else {
-			 text.push('');  
-         
-       
-    }
-}
-		    if (G4Checkbox.checked) {
-			 const G4TextInputValue = G4TextInput.value;
-        if (G4TextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push(`Evaluation of existing denture: ${G4TextInputValue}`);
-			
-        } else {
-			 text.push('');  
-       
-    }
-}
-		  if (G5Checkbox.checked) {
-			 const G5aTextInputValue = G5aTextInput.value;
-			  const G5bTextInputValue = G5bTextInput.value;
-			  const G5cTextInputValue = G5cTextInput.value;
-        if (G5aTextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push(`Smoking Hx: ${G5aTextInputValue} a day, since ${G5bTextInputValue}, ${G5cTextInputValue} intention of quiting `);
-        } else {
-			 text.push('');  
-           
-           }
-}		
-		      if (G6Checkbox.checked) {
-			text.push('\n');
-			text.push('Personality assessment: ');
-            text.push(G6Dropdown.value); }
-		
-		if (G7Checkbox.checked) {
-			text.push('\n\n');
-			text.push('E/O EXAMINATION > NAD ');}
- 
-		if (G8Checkbox.checked) {
-			text.push('\n');
-			text.push('I/O EXAMINATION > NAD ');}
-		
-		 if (G9Checkbox.checked) {
-			 const G9TextInputValue = G9TextInput.value;
-        
-			 if (G9TextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push(` RADIOGRAPHIC ASSESSMENT: ${G9TextInputValue}`);
-			
-        } else {
-			 text.push('\n');  
-            text.push('');
-       
-    }
-}
-		
-		 if (G10Checkbox.checked) {
-			 const G10TextInputValue = G10TextInput.value;
-        if (G10TextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push(`Tx Options: ${G10TextInputValue}`);
-			
-        } else { 
-            text.push('');
-       
-    }
-}
-		
-      if (G10ACheckbox.checked) {
-			text.push('\n');
-            text.push('Pt notified that completion of complete denture will take a min of 3mo (i.e. 6 appt with 2weeks interval'); }
-		
-		if (G11Checkbox.checked) {
-			text.push('\n\n');
-            text.push('TX DELIVERED> Max & mand alginate primary impression taken. Impression checked for quality, sterilized & bagged. Lab card with instructions for pour up of impression & construction of special trays for ZOE impression written, scanned & sent to the lab.'); }
-		if (G12Checkbox.checked) {
-			text.push('\n\n');
-            text.push('Denture hygiene instructions given for existing denture (i.e. to clean with a soft brush & gentle soap, to remove denture at night & to soak in diluted white vinegar or Milton antibacterial tablets)'); }
-		 
-	
-
-	
-		
-	 
-	 //F/F 2nd Body
-	 if (G18Checkbox.checked) {
-			 text.push('\n\n');
-            		text.push(`Custom tray adjusted with acrylic burs to 1mm short of sulcus, not interfering with frenum`);}
-		 if (G19Checkbox.checked) {
-			 text.push('\n\n');
-            		text.push(`Border moulding was performed with the addition of compound stick to the periphery of trays`);}
-			 
-		if (G20Checkbox.checked) {
-			 text.push('\n\n');
-            text.push(`Max & mand secondary impression taken with ${G20Dropdown.value}. Post dam was marked with an indelible marker & transferred to the impression. Impression checked for quality, sterilized & bagged.`);
-			}
-			 
-			  if (G21Checkbox.checked) {
-			 text.push('\n\n');
-            		text.push(`Lab card with instructions for construction of master cast & provision of occlusal wax rims in std dimensions written, scanned & sent to the lab.`);}
-		
-	//F/F Jaw Reg Body 
-	 
-
-if (G28Checkbox.checked) {
- 	 const G28TextInputValue = G28TextInput.value;
-        if (G28TextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push('VDR:');
-			text.push(`${G28TextInputValue} mm est. from nose tip to chin. 3mm freeway space selected`);
-			
-        } else {
-		      text.push('');
-			    }
-}
-
-if (G29Checkbox.checked) {
-    	 const G29TextInputValue = G29TextInput.value;
-        if (G29TextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push('VDO of existing denture: ');
-			text.push(`${G29TextInputValue}mm`);
-			
-        } else {
-			 text.push('');  
-            
-       
-    }
-}
-
-if (G30Checkbox.checked) {
-    text.push('\n\n');
-    text.push('Occlusal wax rims were checked for their stability.');
-}
-
-if (G31Checkbox.checked) {
-    text.push('\n\n');
-    text.push('Max wax rim was adjusted for lip support, tooth display & occlusal plane');
-}
-
-if (G32Checkbox.checked) {
-    text.push('\n\n');
-    text.push('Facial midline, canine lines & smile line were marked on the wax rims.');
-}
-
-if (G33Checkbox.checked) {
-    text.push('\n\n');
-    text.push('Centric relation was recorded & reproduceable.');
-}
-
- if (G34Checkbox.checked) {
-			 const G34TextInputValue = G34TextInput.value;
-        if (G34TextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push(`Tooth Shade: ${G34TextInputValue} & ${G34Dropdown.value} anterior mould selected`);
-			
-        } else { 
-              text.push('\n\n');
-			text.push(`Tooth Shade: XX & ${G34Dropdown.value} anterior mould selected`);
-			
-    }
-}
-
-if (G35Checkbox.checked) {
-    text.push('\n\n');
-    text.push('Marked occlusal wax rims were sterilized & bagged. Lab card with instructions for articulation of master casts & set up of teeth for try-in was written, scanned & sent to the lab.');
-}
-
-	//Tooth Try in Body
-	 if (G49Checkbox.checked) {
-    text.push('\n\n');
-    text.push('Wax-tooth was inserted to verify midline, CR, VDO, lip support, tooth position, buccal corridor, occlusal plane (w/ articulating paper), phonetics, & aesthetics.');
-}
-		 if (G50Checkbox.checked) {
-    text.push('\n\n');
-   text.push(`Bite position was reverified. Retake of jaw record ${G49Dropdown.value}`);
-			}
-	 
-	 	 if (G51Checkbox.checked) {
-    text.push('\n\n');
-    text.push('Patient was given a mirror & was satisfied with the teeth size, colour, & the overall appearance of the denture. Patient’s approval to process the denture was obtained.');}
-			 
-	if (G52Checkbox.checked) {
-    text.push('\n\n');
-    text.push('Wax-tooth was sterilized & bagged. Lab card with instructions to seal wax rims, process the denture in 60:40 original & light pink acrylic, & finish for insertion was written, scanned & sent to the lab.');}
-	 
-	 // F/F Insert Body 
-	 if (G41Checkbox.checked) {
-    text.push('\n\n');
-    text.push('Denture base areas & peripheral borders were checked for high spots/overextended areas using pressure indicator paste. Frenum is cleared.');}
-	 
-	  if (G42Checkbox.checked) {
-    text.push('\n\n');
-    text.push('Effective post dam was confirmed w/ extrusion forces');}
-	  if (G43Checkbox.checked) {
-    text.push('\n\n');
-    text.push('Occlusion was reverified with articulating paper.');}
-	  if (G44Checkbox.checked) {
-    text.push('\n\n');
-    text.push('Denture hygiene instructions given (i.e. to clean with soft brush & gentle soap, to remove denture at night & to soak in diluted white vinegar or Milton antibacterial tablets)');}
-	 
-		 //F/F Review Body
- 
-	 if (G55Checkbox.checked) {
-    text.push('\n\n');
-    text.push('Patient interview & intraoral examination were performed to review for any post-operative issues due to the denture.');
-}
-
-if (G56Checkbox.checked) {
-    text.push('\n\n');
-    text.push('FINDINGS > NAD ');
-}
-
-if (G57Checkbox.checked) {
-    text.push('\n');
-    text.push('Ulcers in frenum region, sulcus & mylohyoid ridge due to lack of clearance');
-}
-
-if (G58Checkbox.checked) {
-    text.push('\n');
-    text.push('Correction of occlusion required');
-}
-
-if (G59Checkbox.checked) {
-    text.push('\n');
-    text.push('Cheek biting due to lack of buccal overjet');
-}
-
-if (G60Checkbox.checked) {
-    text.push('\n');
-    text.push('Restricted food or chewing ');
-}
-
-if (G61Checkbox.checked) {
-    text.push('\n');
-    text.push('Lack of retention (i.e. overextension, processing errors)');
-}
-
-if (G62Checkbox.checked) {
-    text.push('\n');
-    text.push('Too bulky in palatal or buccal surfaces');
-}
-
-		
-		//011 End 
-		  if (supervisorCheckbox.checked) {
-        const supervisorNameTextInputValue = supervisorNameTextInput.value;
-        if (supervisorNameTextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push(`Supervisor:Dr ${supervisorNameTextInputValue}`);
-			   } else {
-			 text.push('\n\n');  
-            text.push('Supervisor:Dr '); }
-    }
-   if (nvCheckbox.checked) {
-			 const nvTextInputValue = nvTextInput.value;
-        if (nvTextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push(`N/V: ${nvTextInputValue}`);
-			
-        } else {
-			 text.push('\n');  
-            text.push('N/V: ');
-			  }}
-	  if (waitlistCheckbox.checked) {
-			 const waitlistTextInputValue = waitlistTextInput.value;
-        if (waitlistTextInputValue.trim() !== '') {
-             text.push('\n');
-	
-			text.push(`${waitlistTextInputValue}`);
-			
-        } else {
-			 text.push('\n');  
-            text.push('Patient placed on general waitlist and seperated');}}
-	 
-	 // F/F Prim End 
-	 	if (G13Checkbox.checked) {
-			 const G13TextInputValue = G13TextInput.value;
-        if (G13TextInputValue.trim() !== '') {
-             text.push('\n\n');
-			text.push(` ${G13TextInputValue}`);
-			
-        } else {
-			 text.push('\n\n');  
-            text.push('Pt well on discharge');}}
-		  
-	 if (G13aCheckbox1.checked) {
-			 const G13aTextInputValue1 = G13aTextInput1.value;
-        if (G13aTextInputValue1.trim() !== '') {
-             text.push('\n\n');
-			text.push('Supervisor: Dr ');
-			text.push(`${G13aTextInputValue1}`);
-		} else {
-           text.push('\n\n');
-			text.push('Supervisor: Dr '); }}
-	 
-		  
-	if (G14Checkbox.checked) {
-			 const G14TextInputValue = G14TextInput.value;
-        if (G14TextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('N/V:');
-			text.push(`${G14TextInputValue}`);
-			
-        } else {
-			 text.push('\n');  
-            text.push('N/V: F/F secondary impression');}}
-	 
-	  // F/F 2ndary End 
-	 
-	 	if (G22Checkbox.checked) {
-			 text.push('\n\n');
-            		text.push(`Pt well on discharge`);}
-	 
-		  
-	 if (ff2supervisorCheckbox.checked) {
-			 const ff2supervisornameTextInputValue = ff2supervisornameTextInput.value;
-        if (ff2supervisornameTextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Supervisor: Dr ');
-			text.push(`${ff2supervisornameTextInputValue}`);
-		} else {
-			text.push('\n');
-            text.push('Supervisor: Dr'); }}
-	 
-		  
-	if (G23Checkbox.checked) {
-			 text.push('\n');  
-            text.push('N/V: F/F Jaw registration');}
-	 
-	 // F/F Jaw reg End
-	 if (ff3G22Checkbox.checked) {
-			 text.push('\n\n');
-            		text.push(`Pt well on discharge`);}
-	 
-		  
-	 if (ff3supervisorCheckbox.checked) {
-			 const ff3supervisornameTextInputValue = ff3supervisornameTextInput.value;
-        if (ff3supervisornameTextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Supervisor: Dr ');
-			text.push(`${ff3supervisornameTextInputValue}`);
-		} else {
-			text.push('\n');
-            text.push('Supervisor: Dr'); }}
-	 
-		  
-	if (ff3G23Checkbox.checked) {
-			 text.push('\n');  
-            text.push('N/V: F/F Teeth Try in');}
-	 
-	  //F/F Insertion end 
-	 if (ff5G22Checkbox.checked) {
-			 text.push('\n\n');
-            		text.push(`Written denture instructions given & explained. Pt well on discharge`);}
-	 
-		  
-	 if (ff5supervisorCheckbox.checked) {
-			 const ff5supervisornameTextInputValue = ff5supervisornameTextInput.value;
-        if (ff5supervisornameTextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Supervisor: Dr ');
-			text.push(`${ff5supervisornameTextInputValue}`);
-		} else {
-			text.push('\n');
-            text.push('Supervisor: Dr'); }}
-	 
-		  
-	if (ff5G23Checkbox.checked) {
-			 text.push('\n');  
-            text.push('N/V: F/F Review');}
-	 
-	 // F/F Teeth Try in end 
-	 
-	 
-if (ff4G22Checkbox.checked) {
-			 text.push('\n\n');
-            		text.push(`Pt well on discharge`);}
-	 
-		  
-	 if (ff4supervisorCheckbox.checked) {
-			 const ff4supervisornameTextInputValue = ff4supervisornameTextInput.value;
-        if (ff4supervisornameTextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Supervisor: Dr ');
-			text.push(`${ff4supervisornameTextInputValue}`);
-		} else {
-			text.push('\n');
-            text.push('Supervisor: Dr'); }}
-	 
-		  
-	if (ff4G23Checkbox.checked) {
-			 text.push('\n');  
-            text.push('N/V: F/F Insertion');}
-
-	 // F/F Review end 
-	 if (ff6G22Checkbox.checked) {
-			 text.push('\n\n');
-            		text.push(`Pt well on discharge`);}
-	 
-		  
-	 if (ff6supervisorCheckbox.checked) {
-			 const ff6supervisornameTextInputValue = ff6supervisornameTextInput.value;
-        if (ff6supervisornameTextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Supervisor: Dr ');
-			text.push(`${ff6supervisornameTextInputValue}`);
-		} else {
-			text.push('\n');
-            text.push('Supervisor: Dr'); }}
-	 
-		  
-	if (ff6G23Checkbox.checked) {
-			 text.push('\n');  
-            text.push('N/V: Review 2.0');}
-	 
-	 //Endo 1 End
-	 
-	 	if (endo1G22Checkbox.checked) {
-			 text.push('\n\n');
-            		text.push(`Pt well on discharge`);}
-	 
-		  
-	 if (endo1supervisorCheckbox.checked) {
-			 const endo1supervisornameTextInputValue = endo1supervisornameTextInput.value;
-        if (endo1supervisornameTextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push('Supervisor: Dr ');
-			text.push(`${endo1supervisornameTextInputValue}`);
-		} else {
-			text.push('\n');
-            text.push('Supervisor: Dr'); }}
-	 
-		  
-	   if (endo1nvCheckbox.checked) {
-			 const endo1nvTextInputValue = endo1nvTextInput.value;
-        if (endo1nvTextInputValue.trim() !== '') {
-             text.push('\n');
-			text.push(`N/V: ${endo1nvTextInputValue}`);
-			
-        } else {
-			 text.push('\n');  
-            text.push('N/V: ');
-			  }}
-
-
-	 
-	 // Lab Instructions 
-	 if (G15Checkbox.checked) {
-					 text.push('\n\n');  
-            text.push('Lab Instructions'); 
-			  text.push('\n'); 
-		  text.push('Please construct diagnostic models from alginate impressions.');
-		  
-		  }
-		if (G16Checkbox.checked) {
-			 text.push('\n');
-            text.push(`Please construct custom trays ${G16Dropdown.value}`);
-			text.push('\n\n');}
-	
-	 if (G24Checkbox.checked) {
-					 text.push('\n\n');  
-            text.push('Lab Instructions'); 
-			  text.push('\n'); 
-		  text.push('Please construct master cast in stone with 3mm land area, scribe post-dam as indicated on Max impression, depth of post dam');
-		  
-		  }
-	  if (G25Checkbox.checked) { 
-       			  text.push('\n'); 
-		  text.push('Please provide occlusal wax rims to standard dimensions.');
-		  
-		  }
-	 if (G38Checkbox.checked) {
-		text.push('\n\n');	 
-		text.push('Lab Instructions');
-		 text.push('\n');
-		 text.push('Please articulate master casts with bite registration provided.')
-			}
- if (G38ACheckbox.checked) {
-	   text.push('\n'); 
-	  text.push(`Please set up Max & Mand teeth for try-in in shade XX, ${G34Dropdown.value} anterior mold`);}
-	 
-	 if (G38BCheckbox.checked) {
-	   text.push('\n'); 
-	  text.push(`Please mould to match existing denture based on denture impression provided.`);}
-	 
-	   if (G38CCheckbox.checked) {
-	   text.push('\n'); 
-	  text.push(`Please try to achieve edge-to-edge occlusion even if max teeth have to be brought forward.`);}
-	 
-	  if (G54Checkbox.checked) {
-		text.push('\n\n');	 
-		text.push('Lab Instructions');
-		 text.push('\n');
-		 text.push('Please do not move the teeth, seal wax rims & finesse wax up in anterior region.')
-		  	 text.push('\n');
-		 text.push('Please process in 60:40 original & light pink acrylic & finish for insertion.')}
-	 
-	 
-	 
-	 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	        generatedText.value = text.join(''); 
-    }
-   
-
-
-   
- function toggleSection(sectionId) {
-        var section = document.getElementById(sectionId);
-        section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
-        // Do not call generateText() here
-        adjustGeneratedTextWidth(); mvb
-    }
-
-
-
-   
-
-   
-  
-
-</script>
-
 </body>
