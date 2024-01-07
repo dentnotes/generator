@@ -1,4 +1,7 @@
 
+
+
+
 Spry.Utils.addLoadListener(function() {
 	Spry.$$("#button1").addEventListener('click', function(e){ toggleSection('dxSection1') }, false);
 	Spry.$$("#button2").addEventListener('click', function(e){ toggleSection('011Section1') }, false);
@@ -41,7 +44,7 @@ Spry.Utils.addLoadListener(function() {
 	Spry.$$("#button39").addEventListener('click', function(e){ toggleSection('icdasSection1') }, false);
 	Spry.$$("#button40").addEventListener('click', function(e){ toggleSection('laSection1') }, false);
 
-	 
+	
 	
 
 	function getElementsWithClass(TEST) {
@@ -56,8 +59,11 @@ Spry.Utils.addLoadListener(function() {
 const autoElements = getElementsWithClass('TEST');	
 	
 	
+	
     // Get references to HTML elements
-   	const ptCheckbox = document.getElementById('ptCheckbox');
+	  const generatedText = document.getElementById('generatedText');
+   	
+const ptCheckbox = document.getElementById('ptCheckbox');
     const yearDropdown = document.getElementById('yearDropdown');
     const clinicDropdown = document.getElementById('clinicDropdown');
     const codeDropdown = document.getElementById('codeDropdown');
@@ -86,22 +92,16 @@ const autoElements = getElementsWithClass('TEST');
     const ohiCheckbox = document.getElementById('ohiCheckbox');
     const supervisorCheckbox = document.getElementById('supervisorCheckbox');
     const nvCheckbox = document.getElementById('nvCheckbox');
-    const generatedText = document.getElementById('generatedText');
-    const c3sTextInput = document.getElementById('c3sTextInput'); // Add this line
+  
+  
+
+  const c3sTextInput = document.getElementById('c3sTextInput'); // Add this line
     const supervisorNameTextInput = document.getElementById('supervisornameTextInput');
 	const A1TextInput = document.getElementById('A1TextInput');
 	const selectAllRestoCheckbox = document.getElementById('selectAllRestoCheckbox');
 	const B1 = document.getElementById('B1Checkbox');
 	const selectSpecificRestoCheckbox = document.getElementById('selectSpecificSCCheckbox');
-	
- 
-
-
-
-	
-
-	addEventListener('change', generateText);
-	addEventListener('input', generateText);
+	  
 
 	
 	
@@ -124,27 +124,6 @@ const autoElements = getElementsWithClass('TEST');
 
 	
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    toggleSubCheckboxes('B100Checkbox', ['B3Checkbox', 'B4Checkbox', 'B5Checkbox', 'B6Checkbox', 'B7Checkbox', 'B8Checkbox', 'B9Checkbox', 'B10Checkbox', 'B25Checkbox']);
-});
-
-function toggleSubCheckboxes(sourceCheckboxId, targetCheckboxIds) {
-    const sourceCheckbox = document.getElementById(sourceCheckboxId);
-
-    if (sourceCheckbox) {
-        const isChecked = sourceCheckbox.checked;
-
-        targetCheckboxIds.forEach(targetId => {
-            const targetCheckbox = document.getElementById(targetId);
-            if (targetCheckbox) {
-                targetCheckbox.checked = isChecked;
-            }
-        });
-    }
-}
-
-	
 
 
 function toggleSubCheckboxes() {
@@ -353,8 +332,14 @@ E27Checkbox.checked = endo1allCheckbox.checked
         // Trigger the generateText function after changing the checkboxes
         generateText();
     }
-    
+       
+
 	
+
+
+	
+	
+
     // Function to generate text based on selected options
  function generateText() {
     const text = [];
@@ -1417,11 +1402,352 @@ if (E10Checkbox.checked) {
 			 text.push('\n\n');
             		text.push(`Pt understood that the type of final restoration recommended after RCT will be determined by the amount of tooth structure remaining after removal of existing restoration & caries & that a post may be indicated to retain the core.`);
 			;}
+	 // Pulpotomy Body 
 	 
 	 
+	 if (E40Checkbox.checked) {
+    text.push('\n');
+    text.push('Pt informed of the risks & complications of the procedure & an informed consent for tx was obtained.');
+}
+
+if (E41Checkbox.checked) {
+    text.push('\n\n');
+     text.push(`${E41Dropdown.value}`);
+}
+
+
+
+if (E42Checkbox.checked) {
+    text.push('\n');
+    text.push('Anesthetic Used');
+	text.push(`: ${E42Dropdown.value} VIA ${E42InfilDropdown.value}`);
+}
+
+
+
+if (E43Checkbox.checked) {
+    text.push('\n');
+    text.push('Isolation');
+	text.push(`: ${E43Dropdown.value}`);
+}
+
+
+
+if (E44Checkbox.checked) {
+    text.push('\n\n');
+    text.push('Cavity prepared using HS and SS, previous restoration removed/caries free. Exposed pulp reveals');
+ text.push(`: ${E44Dropdown.value}`); }
+
+
+
+if (E45Checkbox.checked) {
+    text.push('\n\n');
+    text.push('Pulp amputation was performed using S/S #8 large round bur. Canal orifice(s) were visually inspected to ensure complete removal of the pulp tissue.');
+}
+
+if (E46Checkbox.checked) {
+    text.push('\n');
+    text.push('Disinfection & hemostasis was achieved by compression of sterile cotton pellets soaked in 2% sodium hypochlorite over the pulp stump(s) using gentle pressure for 2-5mins.');
+}
+
+if (E47Checkbox.checked) {
+    text.push('\n');
+    text.push('Access cavity is temporized with calcium hydroxide paste, Cavit, & Fuji 7 GIC (pink)');
+}
+
+if (E48Checkbox.checked) {
+    text.push('\n\n');
+    text.push('Cusps lightly reduced to take tooth out of occlusion for symptomatic relief & decrease risk of cuspal fracture (discussed with pt prior to tx)');
+}
 
 	 
 	 
+// Endo Chemo body 
+	 
+	 
+    if (E50Checkbox.checked) {
+        text.push('\n');
+        text.push('Advantages & disadvantages of each Tx option were discussed with patient, written information sheets provided.');
+    }
+
+
+
+    if (E51Checkbox.checked) {
+        text.push('\n');
+        text.push('The patient understood the advantages, risks, as well as the cost involved in RCT, including the need for multiple visits, and consented for RCT.');
+    }
+
+
+
+    if (E53Checkbox.checked) {
+        text.push('\n');
+        text.push(`1) Bonded composite: ${E53Dropdown.value}`);
+    }
+
+
+    if (E54Checkbox.checked) {
+        text.push('\n');
+        text.push(`2) Crown: ${E54Dropdown.value}`);
+    }
+
+
+    if (E55Checkbox.checked) {
+        text.push('\n');
+        text.push('Pt understood that the type of final restoration recommended after RCT will be determined by the amount of tooth structure remaining after removal of existing restoration & caries & that a post may be indicated to retain the core.');
+    }
+
+    if (E56Checkbox.checked) {
+        text.push('\n');
+        text.push(`LA/Topical Used: ${E56Dropdown.value}`);
+    }
+
+    if (E57Checkbox.checked) {
+        text.push('\n');
+        text.push(`Anesthetic Used: ${E57Dropdown.value} VIA ${E57InfilDropdown.value}`);
+    }
+
+    if (E58Checkbox.checked) {
+        text.push('\n');
+        text.push(`Isolation: ${E58Dropdown.value}`);
+    }
+
+    if (E59Checkbox.checked) {
+        text.push('\n');
+        text.push('Cavity prepared using HS and SS, previous restoration removed/caries free.');
+    }
+
+    if (E60Checkbox.checked) {
+        text.push('\n');
+        text.push(`NIL pulp exposure/ Pulp exposed: ${E60Dropdown.value}`);
+    }
+
+
+
+    if (etchedCheckbox.checked) {
+        text.push('\n');
+        text.push(`Etched with 37% phosphoric acid, clearfil primer and bond. Gradia: ${E61GradiaDropdown.value}`);
+    }
+
+    if (E62Checkbox.checked) {
+        text.push('\n');
+        text.push('Pre-endodontic provisional restoration completed using GIC/ composite/ bulk fill flowable composite.');
+    }
+
+    if (E63Checkbox.checked) {
+        text.push('\n');
+        text.push('Access cavity prepared using H/S & U/S.');
+    }
+
+
+
+    if (E64Checkbox.checked) {
+        text.push('\n');
+        text.push(`Canal(s) identified. XA Protaper was used to prepare the coronal 3rd of all canal(s)`);
+    }
+
+    if (E65Checkbox.checked) {
+        text.push('\n');
+        text.push('EWL estimated using pre-operative radiograph & apex locator. WL radiograph taken & CWL obtained.');
+    }
+
+    if (E66Checkbox.checked) {
+        text.push('\n');
+        text.push(`Proglider was used to prepare glide path in all canal(s). Canal(s) prepared up to Protaper ${E66ProtaperDropdown.value}, irrigated with 4% sodium hypochlorite & recapitulated with size 10 hand files after each instrumentation.`);
+    }
+	 
+	 
+	 // Obturation Body
+	
+   
+ 
+
+  
+	   if (E80Checkbox.checked) {
+        text.push('\n');
+        text.push(`${E81Dropdown.value}`);
+    }
+
+   
+	 if (E82Checkbox.checked) {
+        text.push('\n');
+        text.push(`Anesthetic Used: ${E82Dropdown.value} VIA ${E82InfilDropdown.value}`);
+    }
+
+  
+
+    if (E83Checkbox.checked) {
+        text.push('\n');
+        text.push(`Isolation: ${E84Dropdown.value}`);
+    } 
+	 
+	 
+	 
+	 
+	 
+    if (E85Checkbox.checked) {
+        text.push('\n');
+        text.push('Temporary restorations removed using H/S & U/S.');
+    }
+
+    if (E86Checkbox.checked) {
+        text.push('\n');
+        text.push('Canal(s) were irrigated with 4% sodium hypochlorite & recapitulated to prepared lengths to ensure patency.');
+    }
+
+    if (E87Checkbox.checked) {
+        text.push('\n');
+        text.push('Master cone tried & tug-back achieved. Master cone radiograph taken.');
+    }
+
+    if (E88Checkbox.checked) {
+        text.push('\n');
+        text.push('All canal(s) were dried with length-controlled paper points.');
+    }
+
+    if (E89Checkbox.checked) {
+        text.push('\n');
+        text.push('All canal(s) were obturated with master cones & medium fine accessory GP points using AH Plus sealer & lateral condensation technique.');
+    }
+
+    if (E90Checkbox.checked) {
+        text.push('\n');
+        text.push('Excess GP were removed using Super endo up to 4mm below each canal orifice (to reduce risk of staining & allow sufficient space for Cavit placement) & the remaining GP were packed with a plugger.');
+    }
+
+    if (E91Checkbox.checked) {
+        text.push('\n');
+        text.push('Excess GP & sealer on the coronal portion of each orifice were removed with Gates Glidden at 10,000 RPM & 5s etch, respectively.');
+    }
+
+    if (E92Checkbox.checked) {
+        text.push('\n');
+        text.push('Final PA radiograph taken.');
+    }
+
+    if (E93Checkbox.checked) {
+        text.push('\n');
+        text.push('Final restoration was placed using composite / Access cavity is temporized with Cavit, & Fuji 9 GIC.');
+    }
+
+    if (E94Checkbox.checked) {
+        text.push('\n');
+        text.push('POIG. Tooth may be sensitive for the next few days post-op (recommend ibuprofen 600mg &/or paracetamol if necessary); Cautioned against consuming hot food/drinks until the LA wears off due to numb lip & cheek/lip biting.');
+    }
+
+    if (E95Checkbox.checked) {
+        text.push('\n');
+        text.push('Informed pt about future treatment appointments, such as the restoration & recall appointments.');
+    }
+
+
+	 
+	 //F/F Primary Body
+	 
+	 
+    
+     if (G1Checkbox.checked) {
+			 const G1TextInputValue = G1TextInput.value;
+        if (G1TextInputValue.trim() !== '') {
+             text.push('\n\n');
+			text.push(`Reason for tooth loss (years of edentulous): ${G1TextInputValue}`);
+			
+        } else {
+			 text.push(''); }}
+
+		    if (G2Checkbox.checked) {
+			 const G2TextInputValue = G2TextInput.value;
+        if (G2TextInputValue.trim() !== '') {
+             text.push('\n\n');
+			text.push(`Patient’s responsibility in home care: ${G2TextInputValue}`);
+			
+        } else {
+			 text.push('');  
+          }
+}
+		    if (G3Checkbox.checked) {
+			 const G3TextInputValue = G3TextInput.value;
+        if (G3TextInputValue.trim() !== '') {
+             text.push('\n\n');
+			text.push(`Hx & preference of existing & previous denture: ${G3TextInputValue}`);
+			
+        } else {
+			 text.push('');  
+         
+       
+    }
+}
+		    if (G4Checkbox.checked) {
+			 const G4TextInputValue = G4TextInput.value;
+        if (G4TextInputValue.trim() !== '') {
+             text.push('\n\n');
+			text.push(`Evaluation of existing denture: ${G4TextInputValue}`);
+			
+        } else {
+			 text.push('');  
+       
+    }
+}
+		  if (G5Checkbox.checked) {
+			 const G5aTextInputValue = G5aTextInput.value;
+			  const G5bTextInputValue = G5bTextInput.value;
+			  const G5cTextInputValue = G5cTextInput.value;
+        if (G5aTextInputValue.trim() !== '') {
+             text.push('\n\n');
+			text.push(`Smoking Hx: ${G5aTextInputValue} a day, since ${G5bTextInputValue}, ${G5cTextInputValue} intention of quiting `);
+        } else {
+			 text.push('');  
+           
+           }
+}		
+		      if (G6Checkbox.checked) {
+			text.push('\n');
+			text.push('Personality assessment: ');
+            text.push(G6Dropdown.value); }
+		
+		if (G7Checkbox.checked) {
+			text.push('\n\n');
+			text.push('E/O EXAMINATION > NAD ');}
+ 
+		if (G8Checkbox.checked) {
+			text.push('\n');
+			text.push('I/O EXAMINATION > NAD ');}
+		
+		 if (G9Checkbox.checked) {
+			 const G9TextInputValue = G9TextInput.value;
+        
+			 if (G9TextInputValue.trim() !== '') {
+             text.push('\n\n');
+			text.push(` RADIOGRAPHIC ASSESSMENT: ${G9TextInputValue}`);
+			
+        } else {
+			 text.push('\n');  
+            text.push('');
+       
+    }
+}
+		
+		 if (G10Checkbox.checked) {
+			 const G10TextInputValue = G10TextInput.value;
+        if (G10TextInputValue.trim() !== '') {
+             text.push('\n\n');
+			text.push(`Tx Options: ${G10TextInputValue}`);
+			
+        } else { 
+            text.push('');
+       
+    }
+}
+		
+      if (G10ACheckbox.checked) {
+			text.push('\n');
+            text.push('Pt notified that completion of complete denture will take a min of 3mo (i.e. 6 appt with 2weeks interval'); }
+		
+		if (G11Checkbox.checked) {
+			text.push('\n\n');
+            text.push('TX DELIVERED> Max & mand alginate primary impression taken. Impression checked for quality, sterilized & bagged. Lab card with instructions for pour up of impression & construction of special trays for ZOE impression written, scanned & sent to the lab.'); }
+		if (G12Checkbox.checked) {
+			text.push('\n\n');
+            text.push('Denture hygiene instructions given for existing denture (i.e. to clean with a soft brush & gentle soap, to remove denture at night & to soak in diluted white vinegar or Milton antibacterial tablets)'); }
 	 
 	 //F/F 2nd Body
 	 if (G18Checkbox.checked) {
@@ -1938,7 +2264,8 @@ if (ff4G22Checkbox.checked) {
     }
    
 
-   
+   addEventListener('change', generateText);
+	addEventListener('input', generateText);
 
    
  function toggleSection(sectionId) {
