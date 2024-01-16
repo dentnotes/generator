@@ -2265,7 +2265,23 @@ if (ff4G22Checkbox.checked) {
    
 
    addEventListener('change', generateText);
-	addEventListener('input', generateText);
+
+	function generateText(event) {
+      // Check if the input field should be excluded
+      if (event.target.id !== 'generatedText') {
+        // Perform your actions here
+        console.log('Text generated:', event.target.value);
+      }
+    }
+
+    // Get all input elements
+    const inputFields = document.querySelectorAll('input');
+
+    // Add event listener to each input field
+    inputFields.forEach(function(input) {
+      input.addEventListener('input', generateText);
+    });
+	
 
    
  function toggleSection(sectionId) {
