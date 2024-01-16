@@ -334,9 +334,48 @@ E27Checkbox.checked = endo1allCheckbox.checked
     }
        
 
+    function toggleSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
+        // Do not call generateText() here
+        adjustGeneratedTextWidth(); mvb
+    }
+
+
+
+var button = document.getElementById("button");
+
+function myFunction() {
+  var copyText = document.getElementById("generatedText");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied!";
+}
+button.addEventListener("click",myFunction);
+
+ function generateText(event) {
+      // Check if the input field should be excluded
+      if (event.target.id !== 'generatedText') {
+        // Perform your actions here
+        console.log('Text generated:', event.target.value);
+      }
+    }
+
+    // Get all input elements
+    const inputFields = document.querySelectorAll('input');
+
+    // Add event listener to each input field
+    inputFields.forEach(function(input) {
+      input.addEventListener('input', generateText);
+    });
+	
 	
 
-
+addEventListener('change', generateText);
+	
 	
 	
 
@@ -2264,47 +2303,9 @@ if (ff4G22Checkbox.checked) {
     }
    
 
-   addEventListener('change', generateText);
-
-	function generateText(event) {
-      // Check if the input field should be excluded
-      if (event.target.id !== 'generatedText') {
-        // Perform your actions here
-        console.log('Text generated:', event.target.value);
-      }
-    }
-
-    // Get all input elements
-    const inputFields = document.querySelectorAll('input');
-
-    // Add event listener to each input field
-    inputFields.forEach(function(input) {
-      input.addEventListener('input', generateText);
-    });
-	
-
    
- function toggleSection(sectionId) {
-        var section = document.getElementById(sectionId);
-        section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
-        // Do not call generateText() here
-        adjustGeneratedTextWidth(); mvb
-    }
 
-
-
-var button = document.getElementById("button");
-
-function myFunction() {
-  var copyText = document.getElementById("generatedText");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(copyText.value);
-  
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copied!";
-}
-button.addEventListener("click",myFunction);
 
 });
+
 // JavaScript Document// JavaScript Document
