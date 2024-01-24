@@ -47,7 +47,7 @@ Spry.Utils.addLoadListener(function() {
  Spry.$$("#button42").addEventListener('click', function(e){ toggleSection('crown2Section') }, false);
      Spry.$$("#button43").addEventListener('click', function(e){ toggleSection('crown3Section') }, false);
      Spry.$$("#button44").addEventListener('click', function(e){ toggleSection('crown4Section') }, false);
-	  Spry.$$("#button16").addEventListener('click', function(e){ toggleSection('oralsurg2Section') }, false);
+	  Spry.$$("#button166").addEventListener('click', function(e){ toggleSection('oralsurg2Section') }, false);
 	
 
 	function getElementsWithClass(TEST) {
@@ -1056,6 +1056,105 @@ addEventListener('change', generateText);
 	  if (crown1medicalHxCheckbox.checked) {
         text.push('\n');
         text.push(`Medical Hx ${crown1hxDropdown.value}`);
+		text.push('\n');
+    }
+     
+     // Perio Intro 
+     
+     if (ptperio1Checkbox.checked) {
+        const perio1A1TextInputValue = perio1A1TextInput.value;
+        const perio1presentationText = `Pt. presented to ${perio1yearDropdown.value} ${perio1clinicDropdown.value} ${perio1codeDropdown.value} for ${perio1typeDropdown.value}`;
+
+        if (perio1A1TextInputValue.trim() !== '') {
+            text.push('\n');
+            text.push(`${perio1presentationText} ${perio1A1TextInputValue}`);
+        } else {
+            text.push('\n');
+            text.push(perio1presentationText);
+        }
+    }
+	  if (perio1c3sCheckbox.checked) {
+        const perio1c3sTextInputValue = perio1c3sTextInput.value;
+        if (perio1c3sTextInputValue.trim() !== '') {
+            text.push('\n');
+            text.push(`3C’s confirmed - ${perio1c3sTextInputValue}`);
+        } else {
+            text.push('\n');
+            text.push('3C’s confirmed'); }}
+	 
+	 if (perio1colgateCheckbox.checked) {
+        text.push('\n');
+        text.push('Colgate 1.5% Hydrogen Peroxide Mouth rinse given.'); }
+	  if (perio1medicalHxCheckbox.checked) {
+        text.push('\n');
+        text.push(`Medical Hx ${perio1hxDropdown.value}`);
+		text.push('\n');
+    }
+	
+	
+		
+	
+ if (ptperio2Checkbox.checked) {
+        const perio2A1TextInputValue = perio2A1TextInput.value;
+        const perio2presentationText = `Pt. presented to ${perio2yearDropdown.value} ${perio2clinicDropdown.value} ${perio2codeDropdown.value} for ${perio2typeDropdown.value}`;
+
+        if (perio2A1TextInputValue.trim() !== '') {
+            text.push('\n');
+            text.push(`${perio2presentationText} ${perio2A1TextInputValue}`);
+        } else {
+            text.push('\n');
+            text.push(perio2presentationText);
+        }
+    }
+	  if (perio2c3sCheckbox.checked) {
+        const perio2c3sTextInputValue = perio2c3sTextInput.value;
+        if (perio2c3sTextInputValue.trim() !== '') {
+            text.push('\n');
+            text.push(`3C’s confirmed - ${perio2c3sTextInputValue}`);
+        } else {
+            text.push('\n');
+            text.push('3C’s confirmed'); }}
+	 
+	 if (perio2colgateCheckbox.checked) {
+        text.push('\n');
+        text.push('Colgate 1.5% Hydrogen Peroxide Mouth rinse given.'); }
+	  if (perio2medicalHxCheckbox.checked) {
+        text.push('\n');
+        text.push(`Medical Hx ${perio2hxDropdown.value}`);
+		text.push('\n');
+    }
+	
+	
+	
+	//Resto Intro 
+	
+	  	 if (ptresto1Checkbox.checked) {
+        const resto1A1TextInputValue = resto1A1TextInput.value;
+        const resto1presentationText = `Pt. presented to ${resto1yearDropdown.value} ${resto1clinicDropdown.value} ${resto1codeDropdown.value} for ${resto1typeDropdown.value}`;
+
+        if (resto1A1TextInputValue.trim() !== '') {
+            text.push('\n');
+            text.push(`${resto1presentationText} ${resto1A1TextInputValue}`);
+        } else {
+            text.push('\n');
+            text.push(resto1presentationText);
+        }
+    }
+	  if (resto1c3sCheckbox.checked) {
+        const resto1c3sTextInputValue = resto1c3sTextInput.value;
+        if (resto1c3sTextInputValue.trim() !== '') {
+            text.push('\n');
+            text.push(`3C’s confirmed - ${resto1c3sTextInputValue}`);
+        } else {
+            text.push('\n');
+            text.push('3C’s confirmed'); }}
+	 
+	 if (resto1colgateCheckbox.checked) {
+        text.push('\n');
+        text.push('Colgate 1.5% Hydrogen Peroxide Mouth rinse given.'); }
+	  if (resto1medicalHxCheckbox.checked) {
+        text.push('\n');
+        text.push(`Medical Hx ${resto1hxDropdown.value}`);
 		text.push('\n');
     }
      
@@ -3304,6 +3403,93 @@ if (ff4G22Checkbox.checked) {
 			 text.push('\n');  
             text.push('N/V: ');
 			  }}
+     
+     
+     //Perio End 
+     if (perio1supervisorCheckbox.checked) {
+			 const perio1supervisornameTextInputValue = perio1supervisornameTextInput.value;
+        if (perio1supervisornameTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('Supervisor: Dr ');
+			text.push(`${perio1supervisornameTextInputValue}`);
+		} else {
+			text.push('\n');
+            text.push('Supervisor: Dr'); }}
+	 
+		  
+	   if (perio1nvCheckbox.checked) {
+			 const perio1nvTextInputValue = perio1nvTextInput.value;
+        if (perio1nvTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push(`N/V: ${perio1nvTextInputValue}`);
+			
+        } else {
+			 text.push('\n');  
+            text.push('N/V: ');
+			  }}
+			  
+			  	if (perio2G22Checkbox.checked) {
+			 text.push('\n\n');
+            		text.push(`Pt well on discharge`);}
+	 
+		  
+	 if (perio2supervisorCheckbox.checked) {
+			 const perio2supervisornameTextInputValue = perio2supervisornameTextInput.value;
+        if (perio2supervisornameTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('Supervisor: Dr ');
+			text.push(`${perio2supervisornameTextInputValue}`);
+		} else {
+			text.push('\n');
+            text.push('Supervisor: Dr'); }}
+	 
+		  
+	   if (perio2nvCheckbox.checked) {
+			 const perio2nvTextInputValue = perio2nvTextInput.value;
+        if (perio2nvTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push(`N/V: ${perio2nvTextInputValue}`);
+			
+        } else {
+			 text.push('\n');  
+            text.push('N/V: ');
+			  }}
+
+     //resto end 
+     
+     if (resto1G22Checkbox.checked) {
+			 text.push('\n\n');
+            		text.push(`Pt well on discharge`);}
+	 
+		  
+	 if (resto1supervisorCheckbox.checked) {
+			 const resto1supervisornameTextInputValue = resto1supervisornameTextInput.value;
+        if (resto1supervisornameTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('Supervisor: Dr ');
+			text.push(`${resto1supervisornameTextInputValue}`);
+		} else {
+			text.push('\n');
+            text.push('Supervisor: Dr'); }}
+	 
+		  
+	   if (resto1nvCheckbox.checked) {
+			 const resto1nvTextInputValue = resto1nvTextInput.value;
+        if (resto1nvTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push(`N/V: ${resto1nvTextInputValue}`);
+			
+        } else {
+			 text.push('\n');  
+            text.push('N/V: ');
+			  }}
+			  
+			  
+			  if (perio1G22Checkbox.checked) {
+			 text.push('\n\n');
+            		text.push(`Pt well on discharge`);}
+     
+     
 	 
 	 // Lab Instructions 
 	 if (G15Checkbox.checked) {
