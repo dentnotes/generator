@@ -135,7 +135,8 @@ crown2allCheckbox.addEventListener('change', toggleSubCheckboxes);
      E221Checkbox.addEventListener('change', toggleSubCheckboxes);
     E250Checkbox.addEventListener('change', toggleSubCheckboxes);
 endo2allCheckbox.addEventListener('change', toggleSubCheckboxes);
-
+endo4allCheckbox.addEventListener('change', toggleSubCheckboxes);
+endo3allCheckbox.addEventListener('change', toggleSubCheckboxes);
 
 function toggleSubCheckboxes() {
         // Check or uncheck checkboxes B3, B4, B5, B6 based on B11Checkbox state
@@ -277,8 +278,8 @@ ff6medicalHxCheckbox.checked = ff6allCheckbox.checked;
 	C11Checkbox.checked = selectAllRestoCheckbox.checked;
 
 	
-	C110Checkbox.checked = selectAllRestoCheckbox.checked;
-	C111Checkbox.checked = selectAllRestoCheckbox.checked;
+	C110Checkbox.checked = selectAllResto2Checkbox.checked;
+	C111Checkbox.checked = selectAllResto2Checkbox.checked;
 	ptresto1Checkbox.checked = selectAllRestoCheckbox.checked;
  resto1c3sCheckbox.checked = selectAllRestoCheckbox.checked;
  resto1colgateCheckbox.checked = selectAllRestoCheckbox.checked;
@@ -395,6 +396,80 @@ endo2G22Checkbox.checked = endo2allCheckbox.checked;
 endo2supervisorCheckbox.checked = endo2allCheckbox.checked;
 endo2nvCheckbox.checked = endo2allCheckbox.checked;
 
+    
+    
+ptendo4Checkbox.checked = endo4allCheckbox.checked;
+endo4c3sCheckbox.checked = endo4allCheckbox.checked;
+endo4colgateCheckbox.checked = endo4allCheckbox.checked;
+endo4medicalHxCheckbox.checked = endo4allCheckbox.checked;
+
+E80Checkbox.checked = endo4allCheckbox.checked;
+E82Checkbox.checked = endo4allCheckbox.checked;
+E83Checkbox.checked = endo4allCheckbox.checked;
+E85Checkbox.checked = endo4allCheckbox.checked;
+E86Checkbox.checked = endo4allCheckbox.checked;
+E87Checkbox.checked = endo4allCheckbox.checked;
+E88Checkbox.checked = endo4allCheckbox.checked;
+E89Checkbox.checked = endo4allCheckbox.checked;
+E90Checkbox.checked = endo4allCheckbox.checked;
+E91Checkbox.checked = endo4allCheckbox.checked;
+E92Checkbox.checked = endo4allCheckbox.checked;
+E93Checkbox.checked = endo4allCheckbox.checked;
+
+E94Checkbox.checked = endo4allCheckbox.checked;
+E95Checkbox.checked = endo4allCheckbox.checked;
+
+endo4G22Checkbox.checked = endo4allCheckbox.checked;
+endo4supervisorCheckbox.checked = endo4allCheckbox.checked;
+endo4nvCheckbox.checked = endo4allCheckbox.checked;
+
+// Additional checkboxes mentioned in the comment
+ptendo3Checkbox.checked = endo3allCheckbox.checked;
+endo3c3sCheckbox.checked = endo3allCheckbox.checked;
+endo3colgateCheckbox.checked = endo3allCheckbox.checked;
+endo3medicalHxCheckbox.checked = endo3allCheckbox.checked;
+
+E50Checkbox.checked = endo3allCheckbox.checked;
+E51Checkbox.checked = endo3allCheckbox.checked;
+E52Checkbox.checked = endo3allCheckbox.checked;
+E53Checkbox.checked = endo3allCheckbox.checked;
+E54Checkbox.checked = endo3allCheckbox.checked;
+E55Checkbox.checked = endo3allCheckbox.checked;
+
+E56Checkbox.checked = endo3allCheckbox.checked;
+E57Checkbox.checked = endo3allCheckbox.checked;
+E58Checkbox.checked = endo3allCheckbox.checked;
+
+E59Checkbox.checked = endo3allCheckbox.checked;
+E60Checkbox.checked = endo3allCheckbox.checked;
+
+E61Checkbox.checked = endo3allCheckbox.checked;
+E62Checkbox.checked = endo3allCheckbox.checked;
+E63Checkbox.checked = endo3allCheckbox.checked;
+
+E64Checkbox.checked = endo3allCheckbox.checked;
+E65Checkbox.checked = endo3allCheckbox.checked;
+E66Checkbox.checked = endo3allCheckbox.checked;
+
+E67Checkbox.checked = endo3allCheckbox.checked;
+E68Checkbox.checked = endo3allCheckbox.checked;
+
+
+endo3G22Checkbox.checked = endo3allCheckbox.checked;
+endo3supervisorCheckbox.checked = endo3allCheckbox.checked;
+endo3nvCheckbox.checked = endo3allCheckbox.checked;
+
+    
+    
+
+ptff1Checkbox.checked = ff1allCheckbox.checked;
+ff1c3sCheckbox.checked = ff1allCheckbox.checked;
+ff1colgateCheckbox.checked = ff1allCheckbox.checked;
+ff1medicalHxCheckbox.checked = ff1allCheckbox.checked;
+G13Checkbox.checked = ff1allCheckbox.checked;
+G13aCheckbox1.checked = ff1allCheckbox.checked;
+G14Checkbox.checked = ff1allCheckbox.checked;
+
  
 	
 	// Crown Section
@@ -413,7 +488,7 @@ document.getElementById('J5Checkbox').checked = crown1allCheckbox.checked;
 document.getElementById('J6Checkbox').checked = crown1allCheckbox.checked;
 document.getElementById('J7Checkbox').checked = crown1allCheckbox.checked;
 document.getElementById('J8Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J9Checkbox').checked = crown1allCheckbox.checked;
+
 document.getElementById('J10Checkbox').checked = crown1allCheckbox.checked;
 document.getElementById('J11Checkbox').checked = crown1allCheckbox.checked;
 document.getElementById('J12Checkbox').checked = crown1allCheckbox.checked;
@@ -432,6 +507,7 @@ document.getElementById('J39Checkbox').checked = crown1allCheckbox.checked;
 document.getElementById('J40Checkbox').checked = crown1allCheckbox.checked;
 document.getElementById('J41Checkbox').checked = crown1allCheckbox.checked;
 document.getElementById('J43Checkbox').checked = crown1allCheckbox.checked;
+    document.getElementById('J44Checkbox').checked = crown1allCheckbox.checked;
 
 document.getElementById('J47Checkbox').checked = crown1allCheckbox.checked;
 document.getElementById('J48Checkbox').checked = crown1allCheckbox.checked;
@@ -1997,14 +2073,15 @@ if (J41Checkbox.checked) {
 
 if (J43Checkbox.checked) {
     text.push('Occlusal surface material: ' + document.getElementById('J43Dropdown').value);
-    text.push('\n\n');
+  
 }
 
 
 // J44
 if (J44Checkbox.checked) {
+        text.push('\n\n');
     text.push('Max & mand alginate primary impression taken. Impression checked for quality, sterilized & bagged. Lab card with instructions for construction of diagnostic models & custom tray for PVS impression of tooth ___ written, scanned & sent to the lab.');
-    text.push('\n\n');
+   
 }
 
 // The 'text' array now contains the generated text based on the checked checkboxes and input values
@@ -2094,8 +2171,10 @@ if (J66Checkbox.checked) {
 
 // J67
 if (J67Checkbox.checked) {
+        text.push('REMAINING TX PLAN');
+     text.push('\n');
     text.push('Secondary impression');
-    text.push('\n\n');
+    text.push('\n');
 }
 
 // J68
@@ -2711,7 +2790,313 @@ if (E48Checkbox.checked) {
         text.push(`Proglider was used to prepare glide path in all canal(s). Canal(s) prepared up to Protaper ${E66ProtaperDropdown.value}, irrigated with 4% sodium hypochlorite & recapitulated with size 10 hand files after each instrumentation.`);
     }
 	 
+     
+     
+			  const E69ATextInputValue = E69ATextInput.value;
+          if (E69ATextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('Canal:');
+              text.push(` ${E69ATextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+     	  const E70ATextInputValue = E70ATextInput.value;
+          if (E70ATextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('Ref point:');
+              text.push(` ${E70ATextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+       const E71ATextInputValue = E71ATextInput.value;
+          if (E71ATextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('EWL:');
+              text.push(` ${E71ATextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+        const E72ATextInputValue = E72ATextInput.value;
+          if (E72ATextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('WLF Size:');
+              text.push(` ${E72ATextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+         const E73ATextInputValue = E73ATextInput.value;
+          if (E73ATextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('CWL:');
+              text.push(` ${E73ATextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+         const E74ATextInputValue = E74ATextInput.value;
+          if (E74ATextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('Last rotary used:');
+              text.push(` ${E74ATextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+         const E75ATextInputValue = E75ATextInput.value;
+          if (E75ATextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('(MC):');
+              text.push(` ${E75ATextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
 	 
+     const E69BTextInputValue = E69BTextInput.value;
+          if (E69BTextInputValue.trim() !== '') {
+             text.push('\n\n');
+			text.push('Canal:');
+              text.push(` ${E69BTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+     	  const E70BTextInputValue = E70BTextInput.value;
+          if (E70BTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('Ref point:');
+              text.push(` ${E70BTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+       const E71BTextInputValue = E71BTextInput.value;
+          if (E71BTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('EWL:');
+              text.push(` ${E71BTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+        const E72BTextInputValue = E72BTextInput.value;
+          if (E72BTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('WLF Size:');
+              text.push(` ${E72BTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+         const E73BTextInputValue = E73BTextInput.value;
+          if (E73BTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('CWL:');
+              text.push(` ${E73BTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+         const E74BTextInputValue = E74BTextInput.value;
+          if (E74BTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('Last rotary used:');
+              text.push(` ${E74BTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+         const E75BTextInputValue = E75BTextInput.value;
+          if (E75BTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('(MC):');
+              text.push(` ${E75BTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+     
+       const E69CTextInputValue = E69CTextInput.value;
+          if (E69CTextInputValue.trim() !== '') {
+             text.push('\n\n');
+			text.push('Canal:');
+              text.push(` ${E69CTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+     	  const E70CTextInputValue = E70CTextInput.value;
+          if (E70CTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('Ref point:');
+              text.push(` ${E70CTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+       const E71CTextInputValue = E71CTextInput.value;
+          if (E71CTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('EWL:');
+              text.push(` ${E71CTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+        const E72CTextInputValue = E72CTextInput.value;
+          if (E72CTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('WLF Size:');
+              text.push(` ${E72CTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+         const E73CTextInputValue = E73CTextInput.value;
+          if (E73CTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('CWL:');
+              text.push(` ${E73CTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+         const E74CTextInputValue = E74CTextInput.value;
+          if (E74CTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('Last rotary used:');
+              text.push(` ${E74CTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+         const E75CTextInputValue = E75CTextInput.value;
+          if (E75CTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('(MC):');
+              text.push(` ${E75CTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+      const E69DTextInputValue = E69DTextInput.value;
+          if (E69DTextInputValue.trim() !== '') {
+             text.push('\n\n');
+			text.push('Canal:');
+              text.push(` ${E69DTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+     	  const E70DTextInputValue = E70DTextInput.value;
+          if (E70DTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('Ref point:');
+              text.push(` ${E70DTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+       const E71DTextInputValue = E71DTextInput.value;
+          if (E71DTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('EWL:');
+              text.push(` ${E71DTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+        const E72DTextInputValue = E72DTextInput.value;
+          if (E72DTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('WLF Size:');
+              text.push(` ${E72DTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+         const E73DTextInputValue = E73DTextInput.value;
+          if (E73DTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('CWL:');
+              text.push(` ${E73DTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+         const E74DTextInputValue = E74DTextInput.value;
+          if (E74DTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('Last rotary used:');
+              text.push(` ${E74DTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+     
+         const E75DTextInputValue = E75DTextInput.value;
+          if (E75DTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('(MC):');
+              text.push(` ${E75DTextInputValue}`);
+			 }
+             else {
+			text.push('');  
+       
+    }
+       
 	 // Obturation Body
 	
    
@@ -2741,7 +3126,7 @@ if (E48Checkbox.checked) {
 	 
 	 
     if (E85Checkbox.checked) {
-        text.push('\n');
+        text.push('\n\n');
         text.push('Temporary restorations removed using H/S & U/S.');
     }
 
@@ -2751,7 +3136,7 @@ if (E48Checkbox.checked) {
     }
 
     if (E87Checkbox.checked) {
-        text.push('\n');
+       text.push('\n\n');
         text.push('Master cone tried & tug-back achieved. Master cone radiograph taken.');
     }
 
@@ -2766,32 +3151,32 @@ if (E48Checkbox.checked) {
     }
 
     if (E90Checkbox.checked) {
-        text.push('\n');
+        text.push('\n\n');
         text.push('Excess GP were removed using Super endo up to 4mm below each canal orifice (to reduce risk of staining & allow sufficient space for Cavit placement) & the remaining GP were packed with a plugger.');
     }
 
     if (E91Checkbox.checked) {
-        text.push('\n');
+      text.push('\n\n');
         text.push('Excess GP & sealer on the coronal portion of each orifice were removed with Gates Glidden at 10,000 RPM & 5s etch, respectively.');
     }
 
     if (E92Checkbox.checked) {
-        text.push('\n');
+        text.push('\n\n');
         text.push('Final PA radiograph taken.');
     }
 
     if (E93Checkbox.checked) {
-        text.push('\n');
+       text.push('\n\n');
         text.push('Final restoration was placed using composite / Access cavity is temporized with Cavit, & Fuji 9 GIC.');
     }
 
     if (E94Checkbox.checked) {
-        text.push('\n');
+        text.push('\n\n');
         text.push('POIG. Tooth may be sensitive for the next few days post-op (recommend ibuprofen 600mg &/or paracetamol if necessary); Cautioned against consuming hot food/drinks until the LA wears off due to numb lip & cheek/lip biting.');
     }
 
     if (E95Checkbox.checked) {
-        text.push('\n');
+      text.push('\n\n');
         text.push('Informed pt about future treatment appointments, such as the restoration & recall appointments.');
     }
 
