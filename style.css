@@ -41,7 +41,7 @@
 
         #checkboxes,
         #output {
-            width: 45%;
+            width: 50%;
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -133,6 +133,11 @@
             padding: 8px;
             border: 1px solid #ddd;
             border-radius: 4px;
+        
+        }
+       input[type="text1"] {
+            
+     width: 35px;
         }
 
         button {
@@ -170,12 +175,13 @@
 }
 
    table {
-            width: 100%;
+            width: auto;
             border-collapse: collapse;
             margin-top: 20px;
+       
         }
 
-        th, td {
+        th, td, col {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;

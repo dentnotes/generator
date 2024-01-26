@@ -49,6 +49,9 @@ Spry.Utils.addLoadListener(function() {
      Spry.$$("#button44").addEventListener('click', function(e){ toggleSection('crown4Section') }, false);
 	  Spry.$$("#button166").addEventListener('click', function(e){ toggleSection('oralsurg2Section') }, false);
 	
+Spry.$$("#button400").addEventListener('click', function(e){ toggleSection('perioclassSection1') }, false);	
+	Spry.$$("#button401").addEventListener('click', function(e){ toggleSection('eteethSection1') }, false);	
+	Spry.$$("#button402").addEventListener('click', function(e){ toggleSection('elistSection1') }, false);
 
 	function getElementsWithClass(TEST) {
     const elements = {};
@@ -129,7 +132,9 @@ crown2allCheckbox.addEventListener('change', toggleSubCheckboxes);
     crown3allCheckbox.addEventListener('change', toggleSubCheckboxes);
     crown4allCheckbox.addEventListener('change', toggleSubCheckboxes);
 	 F1Checkbox.addEventListener('change', toggleSubCheckboxes);
-
+     E221Checkbox.addEventListener('change', toggleSubCheckboxes);
+    E250Checkbox.addEventListener('change', toggleSubCheckboxes);
+endo2allCheckbox.addEventListener('change', toggleSubCheckboxes);
 
 
 function toggleSubCheckboxes() {
@@ -272,9 +277,15 @@ ff6medicalHxCheckbox.checked = ff6allCheckbox.checked;
 	C11Checkbox.checked = selectAllRestoCheckbox.checked;
 
 	
-	C110Checkbox.checked = selectAllResto2Checkbox.checked;
-	C111Checkbox.checked = selectAllResto2Checkbox.checked;
-	
+	C110Checkbox.checked = selectAllRestoCheckbox.checked;
+	C111Checkbox.checked = selectAllRestoCheckbox.checked;
+	ptresto1Checkbox.checked = selectAllRestoCheckbox.checked;
+ resto1c3sCheckbox.checked = selectAllRestoCheckbox.checked;
+ resto1colgateCheckbox.checked = selectAllRestoCheckbox.checked;
+resto1medicalHxCheckbox.checked = selectAllRestoCheckbox.checked;
+ resto1G22Checkbox.checked = selectAllRestoCheckbox.checked;
+ resto1supervisorCheckbox.checked = selectAllRestoCheckbox.checked;
+ resto1nvCheckbox.checked = selectAllRestoCheckbox.checked;
 	
 	// S/C section
 	consentsCheckbox.checked = selectSpecificRestoCheckbox.checked;
@@ -282,6 +293,42 @@ ff6medicalHxCheckbox.checked = ff6allCheckbox.checked;
 	refinementCheckbox.checked = selectSpecificRestoCheckbox.checked;
 	prophyCheckbox.checked = selectSpecificRestoCheckbox.checked;
 	ohiCheckbox.checked = selectSpecificRestoCheckbox.checked;
+    ptsc1Checkbox.checked = selectSpecificSCCheckbox.checked;
+ sc1c3sCheckbox.checked = selectSpecificSCCheckbox.checked;
+ sc1colgateCheckbox.checked = selectSpecificSCCheckbox.checked;
+sc1medicalHxCheckbox.checked = selectSpecificSCCheckbox.checked;
+ sc1G22Checkbox.checked = selectSpecificSCCheckbox.checked;
+ sc1supervisorCheckbox.checked = selectSpecificSCCheckbox.checked;
+ sc1nvCheckbox.checked = selectSpecificSCCheckbox.checked;
+    
+    
+    ptperio1Checkbox.checked = E221Checkbox.checked;
+ perio1c3sCheckbox.checked = E221Checkbox.checked;
+ perio1colgateCheckbox.checked = E221Checkbox.checked;
+perio1medicalHxCheckbox.checked = E221Checkbox.checked;
+ perio1G22Checkbox.checked = E221Checkbox.checked;
+ perio1supervisorCheckbox.checked = E221Checkbox.checked;
+ perio1nvCheckbox.checked = E221Checkbox.checked;
+     P25Checkbox.checked = E221Checkbox.checked;
+      P10Checkbox.checked = E221Checkbox.checked;
+      P1ACheckbox.checked = E221Checkbox.checked;
+     P1BCheckbox.checked = E221Checkbox.checked;
+     
+    
+ptperio2Checkbox.checked = E250Checkbox.checked;
+perio2c3sCheckbox.checked = E250Checkbox.checked;
+perio2colgateCheckbox.checked = E250Checkbox.checked;
+perio2medicalHxCheckbox.checked = E250Checkbox.checked;
+p40Checkbox5.checked = E250Checkbox.checked;
+p40Checkbox6.checked = E250Checkbox.checked;
+p40Checkbox7.checked = E250Checkbox.checked;
+p40Checkbox8.checked = E250Checkbox.checked;
+p40Checkbox9.checked = E250Checkbox.checked;
+p40Checkbox10.checked = E250Checkbox.checked;
+perio2G22Checkbox.checked = E250Checkbox.checked;
+perio2supervisorCheckbox.checked = E250Checkbox.checked;
+perio2nvCheckbox.checked = E250Checkbox.checked;
+    
 	
 		B30Checkbox.checked = B105Checkbox.checked;
 		B31Checkbox.checked = B105Checkbox.checked;
@@ -329,6 +376,25 @@ E24Checkbox.checked = endo1allCheckbox.checked
 E25Checkbox.checked = endo1allCheckbox.checked
 E26Checkbox.checked = endo1allCheckbox.checked
 E27Checkbox.checked = endo1allCheckbox.checked
+    
+    
+ptendo2Checkbox.checked = endo2allCheckbox.checked;
+endo2c3sCheckbox.checked = endo2allCheckbox.checked;
+endo2colgateCheckbox.checked = endo2allCheckbox.checked;
+endo2medicalHxCheckbox.checked = endo2allCheckbox.checked;
+E40Checkbox.checked = endo2allCheckbox.checked;
+E41Checkbox.checked = endo2allCheckbox.checked;
+E42Checkbox.checked = endo2allCheckbox.checked;
+E43Checkbox.checked = endo2allCheckbox.checked;
+E44Checkbox.checked = endo2allCheckbox.checked;
+E45Checkbox.checked = endo2allCheckbox.checked;
+E46Checkbox.checked = endo2allCheckbox.checked;
+E47Checkbox.checked = endo2allCheckbox.checked;
+E48Checkbox.checked = endo2allCheckbox.checked;
+endo2G22Checkbox.checked = endo2allCheckbox.checked;
+endo2supervisorCheckbox.checked = endo2allCheckbox.checked;
+endo2nvCheckbox.checked = endo2allCheckbox.checked;
+
  
 	
 	// Crown Section
@@ -353,32 +419,13 @@ document.getElementById('J11Checkbox').checked = crown1allCheckbox.checked;
 document.getElementById('J12Checkbox').checked = crown1allCheckbox.checked;
 document.getElementById('J13Checkbox').checked = crown1allCheckbox.checked;
 document.getElementById('J14Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J15Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J16Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J17Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J18Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J19Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J20Checkbox').checked = crown1allCheckbox.checked;
+
 
 // Relevant Abutment/Adjacent Teeth Assessment Section
 
-document.getElementById('J26Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J27Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J28Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J29Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J30Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J31Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J32Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J33Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J34Checkbox').checked = crown1allCheckbox.checked;
 
 // TX PLAN Section
 
-document.getElementById('J35Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J36Checkbox').checked = crown1allCheckbox.checked;
-document.getElementById('J37Checkbox').checked = crown1allCheckbox.checked;
-
-// Restoration Type Section
 
 document.getElementById('J38Checkbox').checked = crown1allCheckbox.checked;
 document.getElementById('J39Checkbox').checked = crown1allCheckbox.checked;
@@ -481,7 +528,7 @@ document.getElementById('o1Checkbox3').checked = F1Checkbox.checked;
 document.getElementById('o1Checkbox3A').checked = F1Checkbox.checked;
 document.getElementById('o1Checkbox4').checked = F1Checkbox.checked;
 document.getElementById('o1Checkbox5').checked = F1Checkbox.checked;
-document.getElementById('OA10Checkbox').checked = F1Checkbox.checked;
+
 document.getElementById('OA11Checkbox').checked = F1Checkbox.checked;
 document.getElementById('OA12Checkbox').checked = F1Checkbox.checked;
 document.getElementById('o1Checkbox6').checked = F1Checkbox.checked;
@@ -1159,6 +1206,42 @@ addEventListener('change', generateText);
     }
      
      
+     // S/C Intro 
+     
+     
+      if (ptsc1Checkbox.checked) {
+        const sc1A1TextInputValue = sc1A1TextInput.value;
+        const sc1presentationText = `Pt. presented to ${sc1yearDropdown.value} ${sc1clinicDropdown.value} ${sc1codeDropdown.value} for ${sc1typeDropdown.value}`;
+
+        if (sc1A1TextInputValue.trim() !== '') {
+            text.push('\n');
+            text.push(`${sc1presentationText} ${sc1A1TextInputValue}`);
+        } else {
+            text.push('\n');
+            text.push(sc1presentationText);
+        }
+    }
+	  if (sc1c3sCheckbox.checked) {
+        const sc1c3sTextInputValue = sc1c3sTextInput.value;
+        if (sc1c3sTextInputValue.trim() !== '') {
+            text.push('\n');
+            text.push(`3C’s confirmed - ${sc1c3sTextInputValue}`);
+        } else {
+            text.push('\n');
+            text.push('3C’s confirmed'); }}
+	 
+	 if (sc1colgateCheckbox.checked) {
+        text.push('\n');
+        text.push('Colgate 1.5% Hydrogen Peroxide Mouth rinse given.'); }
+	  if (sc1medicalHxCheckbox.checked) {
+        text.push('\n');
+        text.push(`Medical Hx ${sc1hxDropdown.value}`);
+		text.push('\n');
+    }
+	
+	
+
+     
 	 
 	 // 011 Body
     if (B1Checkbox.checked) {
@@ -1732,46 +1815,67 @@ if (o1Checkbox10.checked) {
      //Crown Consult 
      
     
+
 if (J1Checkbox.checked) {
-    text.push('\n\n');
-    text.push(' DENTAL & SOCIAL HX ');
-    text.push('\n');
+    const J1TextInputValue = J1TextInput.value;
+    if (J1TextInputValue.trim() !== '') {
+        text.push('\n\n');
+          text.push(' DENTAL & SOCIAL HX ');
+            text.push('\n');
+        text.push(`Brushing freq, TB & TP: ${J1TextInputValue}`);
+    } else {
+        text.push('');
+    }
 }
 
-// J1
-if (J1Checkbox.checked) {
-    text.push('Brushing freq, TB & TP: ' + document.getElementById('J1TextInput').value);
-    text.push('\n');
-}
-
-// J2
+// Checkbox J2
 if (J2Checkbox.checked) {
-    text.push('Interdental cleaning/mouthwash: ' + document.getElementById('J2TextInput').value);
-    text.push('\n');
+    const J2TextInputValue = J2TextInput.value;
+    if (J2TextInputValue.trim() !== '') {
+        text.push('\n');
+        text.push(`Interdental cleaning/mouthwash: ${J2TextInputValue}`);
+    } else {
+        text.push('');
+    }
 }
 
-// J3
+// Checkbox J3
 if (J3Checkbox.checked) {
-    text.push('Tobacco or alcohol consumption: ' + document.getElementById('J3TextInput').value);
-    text.push('\n');
+    const J3TextInputValue = J3TextInput.value;
+    if (J3TextInputValue.trim() !== '') {
+        text.push('\n');
+        text.push(`Tobacco or alcohol consumption: ${J3TextInputValue}`);
+    } else {
+        text.push('');
+    }
 }
 
-// J4
+// Checkbox J4
 if (J4Checkbox.checked) {
-    text.push('Snacks/sugary drinks (freq. & timing): ' + document.getElementById('J4TextInput').value);
-    text.push('\n');
+    const J4TextInputValue = J4TextInput.value;
+    if (J4TextInputValue.trim() !== '') {
+        text.push('\n');
+        text.push(`Snacks/sugary drinks (freq. & timing): ${J4TextInputValue}`);
+    } else {
+        text.push('');
+    }
 }
 
-// J5
+// Checkbox J5
 if (J5Checkbox.checked) {
-    text.push('Risk factors related to occupation/interests: ' + document.getElementById('J5TextInput').value);
-    text.push('\n\n');
+    const J5TextInputValue = J5TextInput.value;
+    if (J5TextInputValue.trim() !== '') {
+        text.push('\n');
+        text.push(`Risk factors related to occupation/interests: ${J5TextInputValue}`);
+    } else {
+        text.push('');
+    }
 }
-
 // PATIENT EXPECTATION
 if (J6Checkbox.checked) {
+       text.push('\n\n');
     text.push(' PATIENT EXPECTATION:  ' + document.getElementById('J6Dropdown').value + ' ' + document.getElementById('J6TextInput').value);
-    text.push('\n\n');
+  
 }
 
 // AESTHETIC EVALUATION
@@ -1834,30 +1938,14 @@ if (J15Checkbox.checked) {
 
 
 // J18 - J25
-if (J18Checkbox.checked) {
-    text.push('Restorations (type & quality): ' + document.getElementById('J18TextInput').value);
-    text.push('\n');
-}
-
-if (J19Checkbox.checked) {
-    text.push('Caries: ' + document.getElementById('J19TextInput').value);
-    text.push('\n');
-}
-
-if (J20Checkbox.checked) {
-    text.push('Fractures: ' + document.getElementById('J20TextInput').value);
-    text.push('\n');
-}
 
 if (J21Checkbox.checked) {
     text.push('Ferrule height: ' + document.getElementById('J21TextInput').value);
     text.push('\n');
 }
 
-if (J22Checkbox.checked) {
-    text.push('Periodontal status: ' + document.getElementById('J22TextInput').value);
-    text.push('\n');
-}
+
+
 
 if (J23Checkbox.checked) {
     text.push('Radiographic findings: ' + document.getElementById('J23TextInput').value);
@@ -1876,81 +1964,13 @@ if (J25Checkbox.checked) {
 
 
 
-// J26 - J34
-if (J26Checkbox.checked) {
-    text.push('TOOTH ___: ' + document.getElementById('J26TextInput').value);
-    text.push('\n');
-}
-
-if (J27Checkbox.checked) {
-    text.push('Restorations (type & quality): ' + document.getElementById('J27TextInput').value);
-    text.push('\n');
-}
-
-if (J28Checkbox.checked) {
-    text.push('Caries: ' + document.getElementById('J28TextInput').value);
-    text.push('\n');
-}
-
-if (J29Checkbox.checked) {
-    text.push('Fractures: ' + document.getElementById('J29TextInput').value);
-    text.push('\n');
-}
-
-if (J30Checkbox.checked) {
-    text.push('Ferrule height: ' + document.getElementById('J30TextInput').value);
-    text.push('\n');
-}
-
-if (J31Checkbox.checked) {
-    text.push('Periodontal status: ' + document.getElementById('J31TextInput').value);
-    text.push('\n');
-}
-
-if (J32Checkbox.checked) {
-    text.push('Radiographic findings: ' + document.getElementById('J32TextInput').value);
-    text.push('\n');
-}
-
-if (J33Checkbox.checked) {
-    text.push('Pulp vitality (cold/ EPT): ' + document.getElementById('J33TextInput').value);
-    text.push('\n');
-}
-
-if (J34Checkbox.checked) {
-    text.push('Dx: ' + document.getElementById('J34TextInput').value);
-    text.push('\n\n');
-}
-
-// J34A, J34B
-if (J34ACheckbox.checked) {
-    text.push('Tooth crack on ___ evident. ___ symptoms.');
-    text.push('\n\n');
-}
-
 if (J34BCheckbox.checked) {
     text.push('Patient informed that tooth ___ has compromised tooth structure & requires protective measure from occluding forces. Warned risk of further fracturing, bacterial leakage requiring RCT & risk of complete fracture warranting extraction. Advised that direct restoration may be inadequate to withstand cusps & that cuspal coverage (in the form of crown, onlay or overlay depending on the extent of defect) may be ideal. Explained the multiple visits involved & what happens at each stage. Pt understood & happy to move forward with tx. Informed consent obtained.');
-    text.push('\n\n');
-}
-
-
-
-
-// J35 - J37
-if (J35Checkbox.checked) {
-    text.push('Periodontal tx required: i.e. periodontal health stabilization, crown lengthening ' + document.getElementById('J35TextInput').value);
     text.push('\n');
 }
 
-if (J36Checkbox.checked) {
-    text.push('Endodontic tx required: ' + document.getElementById('J36TextInput').value);
-    text.push('\n');
-}
 
-if (J37Checkbox.checked) {
-    text.push('Foundation restoration required: ' + document.getElementById('J37TextInput').value);
-    text.push('\n\n');
-}
+
 
 
 
@@ -2346,86 +2366,154 @@ if (E10Checkbox.checked) {
 			 text.push('\n\n');
             		text.push(`PULP SENSIBILITY TESTS performed.`);}
 	 
+     
   if (E11Checkbox.checked) {
 			 const E11TextInputValue = E11TextInput.value;
-        if (E11TextInputValue.trim() !== '') {
+       const E11BTextInputValue = E11BTextInput.value;
+        const E11CTextInputValue = E11CTextInput.value;
+       if (E11BTextInputValue.trim() !== '') {
              text.push('\n'); 
-			 text.push(`Cold:${E11Dropdown.value}`);
+			 text.push(`Cold:`);
 			text.push(` ${E11TextInputValue}`);
+      	 text.push(` ${E11Dropdown.value}`);
+      	text.push(`, ${E11BTextInputValue}`);
+      	 text.push(` ${E11BDropdown.value}`);
+			} 
+      else {     text.push('\n'); 
+			 text.push(`Cold:`);
+			text.push(` ${E11TextInputValue}`);
+      	 text.push(` ${E11Dropdown.value}`);
+      	
+			} 
+      if (E11CTextInputValue.trim() !== '') {
+          text.push(`, ${E11CTextInputValue}`);
+      	 text.push(` ${E11CDropdown.value}`);
+			} 
+      else {     text.push(''); 
 			
-        } else {
-			 text.push('\n');  
-            text.push(`Cold:${E11Dropdown.value}`);
-       
-    }
-}
+      	
+			} }
+     
 		
-	 if (E12Checkbox.checked) {
-			 const E12TextInputValue = E12TextInput.value;
-        if (E12TextInputValue.trim() !== '') {
+	  if (E12Checkbox.checked) {
+			 const E11TextInputValue = E11TextInput.value;
+       const E11BTextInputValue = E11BTextInput.value;
+        const E11CTextInputValue = E11CTextInput.value;
+       if (E11BTextInputValue.trim() !== '') {
              text.push('\n'); 
-			 text.push(`EPT:${E12Dropdown.value}`);
-			text.push(` ${E12TextInputValue}`);
+			 text.push(`EPT:`);
+			text.push(` ${E11TextInputValue}`);
+      	 text.push(` ${E12Dropdown.value}`);
+      	text.push(`, ${E11BTextInputValue}`);
+      	 text.push(` ${E12BDropdown.value}`);
+			} 
+      else {     text.push('\n'); 
+			 text.push(`EPT:`);
+			text.push(` ${E11TextInputValue}`);
+      	 text.push(` ${E12Dropdown.value}`);
+      	
+			} 
+      if (E11CTextInputValue.trim() !== '') {
+          text.push(`, ${E11CTextInputValue}`);
+      	 text.push(` ${E12CDropdown.value}`);
+			} 
+      else {     text.push(''); 
 			
-        } else {
-			 text.push('\n');  
-            text.push(`EPT:${E12Dropdown.value}`);
-       
-    }
-}
+      	
+			} }
 	 
-	 if (E13Checkbox.checked) {
-			 const E13TextInputValue = E13TextInput.value;
-        if (E13TextInputValue.trim() !== '') {
-              text.push('\n'); 
-			 text.push(`Palpation:${E13Dropdown.value}`);
-			text.push(` ${E13TextInputValue}`);
+	  if (E13Checkbox.checked) {
+			 const E11TextInputValue = E11TextInput.value;
+       const E11BTextInputValue = E11BTextInput.value;
+        const E11CTextInputValue = E11CTextInput.value;
+       if (E11BTextInputValue.trim() !== '') {
+             text.push('\n'); 
+			 text.push(`Palpation:`);
+			text.push(` ${E11TextInputValue}`);
+      	 text.push(` ${E13Dropdown.value}`);
+      	text.push(`, ${E11BTextInputValue}`);
+      	 text.push(` ${E13BDropdown.value}`);
+			} 
+      else {     text.push('\n'); 
+			 text.push(`Palpation:`);
+			text.push(` ${E11TextInputValue}`);
+      	 text.push(` ${E13Dropdown.value}`);
+      	
+			} 
+      if (E11CTextInputValue.trim() !== '') {
+          text.push(`, ${E11CTextInputValue}`);
+      	 text.push(` ${E13CDropdown.value}`);
+			} 
+      else {     text.push(''); 
 			
-        } else {
-			 text.push('\n');  
-            text.push(`Palpation:${E13Dropdown.value}`);
-       
-    }
-}
+      	
+			} }
 	 
 	 if (E15Checkbox.checked) {
-			 const E15TextInputValue = E15TextInput.value;
-        if (E15TextInputValue.trim() !== '') {
-            text.push('\n'); 
-			 text.push(`Percussion: ${E15Dropdown.value}`);
-			text.push(` ${E15TextInputValue}`);
+			 const E11TextInputValue = E11TextInput.value;
+       const E11BTextInputValue = E11BTextInput.value;
+        const E11CTextInputValue = E11CTextInput.value;
+       if (E11BTextInputValue.trim() !== '') {
+             text.push('\n'); 
+			 text.push(`Percussion:`);
+			text.push(` ${E11TextInputValue}`);
+      	 text.push(` ${E15Dropdown.value}`);
+      	text.push(`, ${E11BTextInputValue}`);
+      	 text.push(` ${E15BDropdown.value}`);
+			} 
+      else {     text.push('\n'); 
+			 text.push(`Percussion:`);
+			text.push(` ${E11TextInputValue}`);
+      	 text.push(` ${E15Dropdown.value}`);
+      	
+			} 
+      if (E11CTextInputValue.trim() !== '') {
+          text.push(`, ${E11CTextInputValue}`);
+      	 text.push(` ${E15CDropdown.value}`);
+			} 
+      else {     text.push(''); 
 			
-        } else {
-			 text.push('\n');  
-            text.push(`Percussion: ${E15Dropdown.value}`);
-       
-    }
-}
-	 
-	 if (E16Checkbox.checked) {
-			 const E16TextInputValue = E16TextInput.value;
-        if (E16TextInputValue.trim() !== '') {
-            text.push('\n'); 
-			 text.push(`Mobility:${E16Dropdown.value}`);
-			text.push(` ${E16TextInputValue}`);
+      	
+			} }
+     
+     
+	  if (E16Checkbox.checked) {
+			 const E11TextInputValue = E11TextInput.value;
+       const E11BTextInputValue = E11BTextInput.value;
+        const E11CTextInputValue = E11CTextInput.value;
+       if (E11BTextInputValue.trim() !== '') {
+             text.push('\n'); 
+			 text.push(`Mobility:`);
+			text.push(` ${E11TextInputValue}`);
+      	 text.push(` ${E16Dropdown.value}`);
+      	text.push(`, ${E11BTextInputValue}`);
+      	 text.push(` ${E16BDropdown.value}`);
+			} 
+      else {     text.push('\n'); 
+			 text.push(`Mobility:`);
+			text.push(` ${E11TextInputValue}`);
+      	 text.push(` ${E16Dropdown.value}`);
+      	
+			} 
+      if (E11CTextInputValue.trim() !== '') {
+          text.push(`, ${E11CTextInputValue}`);
+      	 text.push(` ${E16CDropdown.value}`);
+			} 
+      else {     text.push(''); 
 			
-        } else {
-			 text.push('\n');  
-            text.push(`Mobility:${E16Dropdown.value}`);
-       
-    }
-}
+      	
+			} }
 	 if (E17Checkbox.checked) {
-			 const E17TextInputValue = E17TextInput.value;
-        if (E17TextInputValue.trim() !== '') {
+			  const E17TextInputValue = E17TextInput.value;
+          if (E17TextInputValue.trim() !== '') {
              text.push('\n');
-			text.push('Abnormal probing: ');
-			text.push(`${E17TextInputValue}`);
-			
-        } else {
-			 text.push('');  
-           }
-}
+			text.push('Abnormal probing:');
+              text.push(` ${E17TextInputValue}`);
+			 }
+            } else {
+			text.push('');  
+       
+    }
 	 
 	 if (E18Checkbox.checked) {
 			 text.push('\n\n');
@@ -2594,10 +2682,7 @@ if (E48Checkbox.checked) {
 
 
 
-    if (etchedCheckbox.checked) {
-        text.push('\n');
-        text.push(`Etched with 37% phosphoric acid, clearfil primer and bond. Gradia: ${E61GradiaDropdown.value}`);
-    }
+   
 
     if (E62Checkbox.checked) {
         text.push('\n');
@@ -2710,8 +2795,401 @@ if (E48Checkbox.checked) {
         text.push('Informed pt about future treatment appointments, such as the restoration & recall appointments.');
     }
 
+// Perio body
+      if (P1ACheckbox.checked) {
+        text.push('\n\n');
+        text.push('Dental Hx');
+    }
+     if (P1Checkbox.checked) {
+    const P1TextInputValue = P1TextInput.value;
+    if (P1TextInputValue.trim() !== '') {
+          text.push('\n')
+        text.push(`Brushing freq, TB & TP: ${P1TextInputValue}`);
+    } else {
+        text.push('');
+    }
+}
 
-	 
+if (P2Checkbox.checked) {
+    const P2TextInputValue = P2TextInput.value;
+    if (P2TextInputValue.trim() !== '') {
+        text.push('\n');
+        text.push(`Interdental cleaning/mouthwash: ${P2TextInputValue}`);
+    } else {
+        text.push('');
+    }
+}
+
+if (P3Checkbox.checked) {
+    const P3TextInputValue = P3TextInput.value;
+    if (P3TextInputValue.trim() !== '') {
+        text.push('\n');
+        text.push(`Pain Hx: ${P3TextInputValue}`);
+    } else {
+        text.push('');
+    }
+}
+
+if (P4Checkbox.checked) {
+    const P4TextInputValue = P4TextInput.value;
+    if (P4TextInputValue.trim() !== '') {
+        text.push('\n');
+        text.push(`Bleeding gums: ${P4TextInputValue}`);
+    } else {
+        text.push('');
+    }
+}
+
+if (P5Checkbox.checked) {
+    const P5TextInputValue = P5TextInput.value;
+    if (P5TextInputValue.trim() !== '') {
+        text.push('\n');
+        text.push(`Missing teeth & reason: ${P5TextInputValue}`);
+    } else {
+        text.push('');
+    }
+}
+
+if (P6Checkbox.checked) {
+    const P6TextInputValue = P6TextInput.value;
+    if (P6TextInputValue.trim() !== '') {
+        text.push('\n');
+        text.push(`Tooth mobility or movement: ${P6TextInputValue}`);
+    } else {
+        text.push('');
+    }
+}
+    // DENTAL Hx (Continued)
+     
+         if (P1BCheckbox.checked) {
+        text.push('\n\n');
+        text.push('SOCIAL & FAMILY HX');
+    }
+if (P7Checkbox.checked) {
+    const P7TextInputValue = P7TextInput.value;
+    if (P7TextInputValue.trim() !== '') {
+        text.push('\n');
+        text.push(`Snacks/sugary drinks: ${P7TextInputValue}`);
+    } else {
+        text.push('');
+    }
+}
+
+if (P8Checkbox.checked) {
+    const P8aTextInputValue = P8aTextInput.value;
+    if (P8aTextInputValue.trim() !== '') {
+        text.push('\n');
+        text.push(`Smoking Hx: ${P8aTextInputValue}`);
+    } else {
+        text.push('');
+    }
+}
+
+if (P9Checkbox.checked) {
+    const P9TextInputValue = P9TextInput.value;
+    if (P9TextInputValue.trim() !== '') {
+        text.push('\n');
+        text.push(`Family Hx of diabetes/gum disease/tooth loss: ${P9TextInputValue}`);
+    } else {
+        text.push('');
+    }
+}
+
+if (P10Checkbox.checked) {
+     text.push('\n\n');
+    text.push('Full perio charted. Significant findings:');
+         text.push('\n');
+}
+
+
+     
+     
+ 
+    if (P101Checkbox.checked) {
+         text.push('\n');
+         text.push('Severity');
+        text.push('\n');
+        text.push(`Interdental CAL at site of greatest loss: 1 – 2 mm`);
+   
+}
+    
+       if (P102Checkbox.checked) {
+            text.push('\n');
+             text.push('Severity');
+        text.push('\n');
+        text.push(`Interdental CAL at site of greatest loss: 3 – 4 mm`);
+   
+    }
+
+                           
+    if (P103Checkbox.checked) {
+         text.push('\n');
+          text.push('Severity');
+        text.push('\n');
+        text.push(`Interdental CAL at site of greatest loss: ≥ 5mm`);
+    
+    }
+
+   if (P104Checkbox.checked) {
+        text.push('\n');
+         text.push('Severity');
+        text.push('\n');
+        text.push(`Interdental CAL at site of greatest loss: ≥ 5mm`);
+
+}
+     
+        if (P105Checkbox.checked) {
+        text.push('\n');
+        text.push(`RBL: Coronal Third (< 15%) `);
+
+}
+     
+     
+           if (P106Checkbox.checked) {
+               
+        text.push('\n');
+        text.push(`RBL: Coronal Third (15 – 33 %)`);
+
+}
+     
+           if (P107Checkbox.checked) {
+        text.push('\n');
+        text.push(`RBL:  Extending to the mid third of the root and beyond.`);
+
+}
+     
+           if (P108Checkbox.checked) {
+        text.push('\n');
+        text.push(`RBL: Extending to the mid third of the root and beyond.`);
+
+}
+         if (P109Checkbox.checked) {
+        text.push('\n');
+        text.push(`Periodontitis-associated tooth loss: Nil `);
+
+}
+     
+              if (P110Checkbox.checked) {
+        text.push('\n');
+        text.push(`Periodontitis-associated tooth loss:  ≤ 4 teeth `);
+
+}
+     
+     
+              if (P111Checkbox.checked) {
+        text.push('\n');
+        text.push(`Periodontitis-associated tooth loss: ≥ 5 teeth. `);
+
+}
+     
+       
+
+     
+     
+if (P14Checkbox.checked) {
+    const P14DropdownValue = P14Dropdown.value;
+    if (P14DropdownValue.trim() !== '') {
+        text.push('\n\n');
+        text.push('Complexity');   
+        text.push('\n');
+        text.push(`Max PPD: ${P14DropdownValue}`);
+    } else {
+        text.push('');
+    }
+}
+// P15
+if (P15Checkbox.checked) {
+    const P15DropdownValue = P15Dropdown.value;
+    if (P15DropdownValue.trim() !== '') {
+          text.push('\n');
+        text.push(`RBL pattern: ${P15DropdownValue}`);
+    } else {
+        text.push('');
+    }
+}
+
+// P16
+if (P16Checkbox.checked) {
+    const P16DropdownValue = P16Dropdown.value;
+    if (P16DropdownValue.trim() !== '') {
+           text.push('\n');
+        text.push(`Furcation involvement: ${P16DropdownValue}`);
+    } else {
+        text.push('');
+    }
+}
+
+// P17
+if (P17Checkbox.checked) {
+    const P17DropdownValue = P17Dropdown.value;
+    if (P17DropdownValue.trim() !== '') {
+           text.push('\n');
+        text.push(`Ridge defects: ${P17DropdownValue}`);
+    } else {
+        text.push('');
+    }
+}
+
+// P18
+if (P18Checkbox.checked) {
+    const P18TextInputValue = P18TextInput.value;
+    if (P18TextInputValue.trim() !== '') {
+          text.push('\n');
+        text.push(`Addition (Stage IV): ${P18TextInputValue}`);
+    } else {
+        text.push('');
+    }
+}
+
+// Extent & Distribution (Continued)
+
+if (P19Checkbox.checked) {
+    const P19DropdownValue = P19Dropdown.value;
+        text.push('\n\n');
+
+        text.push(`Extent & Distribution: ${P19DropdownValue}`);
+    
+}
+// Grading (Continued)
+
+
+     if (P116Checkbox.checked) {
+        text.push('\n\n');
+          text.push('Grade Modifiers');
+          text.push('\n');
+         
+        text.push(`Evidence of loss (RBL/CAL) over 5yrs: Evidence of no loss over 5 years. `); }
+     
+     
+      if (P117Checkbox.checked) {
+        text.push('\n\n');
+        text.push(`Evidence of loss (RBL/CAL) over 5yrs: <2mm over 5 years.`); }
+     
+      if (P118Checkbox.checked) {
+        text.push('\n\n');
+        text.push(`Evidence of loss (RBL/CAL) over 5yrs: > 2mm over 5 years. `); }
+     
+     
+          if (P119Checkbox.checked) {
+         text.push('\n');
+        text.push(`%RBL/age: <0.25 `); }
+     
+         if (P120Checkbox.checked) {
+       text.push('\n');
+        text.push(`%RBL/age: 0.25 – 1.0`); }
+     
+     
+         if (P121Checkbox.checked) {
+     text.push('\n');
+        text.push(`%RBL/age: &gt;1.0 `); }
+     
+     
+              if (P122Checkbox.checked) {
+       text.push('\n');
+        text.push(`Case Phenotype: Heavy biofilm deposits with low levels of destruction. `); }
+     
+              if (P123Checkbox.checked) {
+        text.push('\n');
+        text.push(`Case Phenotype: Destruction commensurate with biofilm deposits. `); }
+     
+              if (P124Checkbox.checked) {
+     text.push('\n');
+        text.push(`Case Phenotype: Destruction disproportionate to biofilm deposits; evidence of periods of rapid progression and/or early-onset disease (molar/incisor pattern); expected poor response to standard bacterial control. `); }
+     
+      if (P125Checkbox.checked) {
+        text.push('\n\n');
+          text.push('GRADE MODIFIERS');
+              text.push('\n');
+        text.push(`Non-smoker`); }
+     
+     if (P126Checkbox.checked) {
+        text.push('\n\n');
+           text.push('GRADE MODIFIERS');
+             text.push('\n');
+        text.push(`Smoker < 10 cigarettes/day `); }
+     if (P127Checkbox.checked) {
+        text.push('\n\n');
+           text.push('GRADE MODIFIERS');
+             text.push('\n');
+        text.push(`Smoker >10 cigarettes/day`); }
+     
+     if (P128Checkbox.checked) {
+        text.push('\n');
+        text.push(`Diabetes: Normoglycemic / no diagnosis of Diabetes `); }
+     
+        if (P129Checkbox.checked) {
+        text.push('\n');
+        text.push(`Diabetes: HbA1c < 7.0% in a Diabetes Patient `); }
+     
+        if (P130Checkbox.checked) {
+        text.push('\n');
+        text.push(`Diabetes: HbA1c > 7.0 % in a Diabetes Patient `); }
+     
+     if (P25Checkbox.checked) {
+        const P25ADropdownValue = P25ADropdown.value;
+        const P25BDropdownValue = P25BDropdown.value;
+         const P19BDropdownValue = P19BDropdown.value;
+        text.push('\n\n');
+     text.push('Dx');
+        text.push('\n');
+        text.push(`${P25ADropdownValue} `);
+    text.push(`${P19BDropdownValue}, `);
+        text.push(`Grade ${P25BDropdownValue} periodontitis`);
+          
+    
+
+}
+     
+     
+     
+if (p40Checkbox5.checked) {
+    text.push('\n\n');
+    text.push('U/S & hand scaling (Gracey curettes) used to debride all sub- & supra-gingival surfaces. All calculus & plaque removed.');
+}
+
+// Checkbox 6
+if (p40Checkbox6.checked) {
+    text.push('\n');
+    text.push('Prophy paste used to clean & polish all supragingival surfaces. Floss confirmed removal of calculus on interproximal surfaces.');
+}
+
+// Checkbox 7
+if (p40Checkbox7.checked) {
+    text.push('\n\n');
+    text.push('OHI reinforced to patient.');
+}
+
+// REMAINING p40 PLAN
+
+
+// Checkbox 8
+if (p40Checkbox8.checked) {
+    text.push('\n\nREMAINING Tx plan ');
+    text.push('\n');
+    text.push('250 x2 Active non-surgical perio tx Q2 & Q3 w LA.');
+}
+
+// Checkbox 9
+if (p40Checkbox9.checked) {
+    text.push('\n');
+    text.push('251 Supportive periodontal therapy/review.');
+}
+
+// POST p40
+
+
+// Checkbox 10
+if (p40Checkbox10.checked) {
+    text.push('\n\nPOST OP');
+    text.push('\n');
+    text.push('POIG regarding bleeding, sensitivity & gap formation (if any).');
+}
+     
+     
+     
+     
+
+
 	 //F/F Primary Body
 	 
 	 
@@ -3490,7 +3968,36 @@ if (ff4G22Checkbox.checked) {
             		text.push(`Pt well on discharge`);}
      
      
+	 // S/C end
+     
+     
+     		if (sc1G22Checkbox.checked) {
+			 text.push('\n\n');
+            		text.push(`Pt well on discharge`);}
 	 
+		  
+	 if (sc1supervisorCheckbox.checked) {
+			 const sc1supervisornameTextInputValue = sc1supervisornameTextInput.value;
+        if (sc1supervisornameTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push('Supervisor: Dr ');
+			text.push(`${sc1supervisornameTextInputValue}`);
+		} else {
+			text.push('\n');
+            text.push('Supervisor: Dr'); }}
+	 
+		  
+	   if (sc1nvCheckbox.checked) {
+			 const sc1nvTextInputValue = sc1nvTextInput.value;
+        if (sc1nvTextInputValue.trim() !== '') {
+             text.push('\n');
+			text.push(`N/V: ${sc1nvTextInputValue}`);
+			
+        } else {
+			 text.push('\n');  
+            text.push('N/V: ');
+			  }}
+			  
 	 // Lab Instructions 
 	 if (G15Checkbox.checked) {
 					 text.push('\n\n');  
@@ -3543,8 +4050,25 @@ if (ff4G22Checkbox.checked) {
 		 text.push('Please process in 60:40 original & light pink acrylic & finish for insertion.')}
 	 
 	 
+
+		     	  if (J47Checkbox.checked) {
+		text.push('\n\n');
+                     text.push('Lab Instructions');
+		 text.push('\n'); 
+		text.push('Please construct diagnostic models from alginate impression & return on ___ for diagnostic wax up.');}
+              if (J48Checkbox.checked) {
+	   text.push('\n'); 
+	  text.push(`Please construct custom try for PVS impression for tooth ___.`);}
+		  
 	 
-	 
+	 	  if (J91Checkbox.checked) {
+		text.push('\n\n');
+                     text.push('Lab Instructions');
+		 text.push('\n'); 
+		text.push('Please pour up PVS impression in die stone & mount max & mand model.');}
+              if (J92Checkbox.checked) {
+	   text.push('\n'); 
+	  text.push(`Please construct PFM crown in fine gold cervical collar in SHADE ___ VITA 3D Master for TOOTH ___ OR Please construct Emax/Zirconia/Sinfony crown in SHADE ___ VITA Classic for TOOTH ___ with STUMP SHADE ___.`);}
 		
 		
 		
