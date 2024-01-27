@@ -431,7 +431,7 @@ endo3medicalHxCheckbox.checked = endo3allCheckbox.checked;
 
 E50Checkbox.checked = endo3allCheckbox.checked;
 E51Checkbox.checked = endo3allCheckbox.checked;
-E52Checkbox.checked = endo3allCheckbox.checked;
+
 E53Checkbox.checked = endo3allCheckbox.checked;
 E54Checkbox.checked = endo3allCheckbox.checked;
 E55Checkbox.checked = endo3allCheckbox.checked;
@@ -2358,12 +2358,12 @@ if (E1ACheckbox.checked) {
 			}		if (E1CCheckbox.checked) {
 			 text.push('\n');
             text.push(`Sinus tract: ${E1CDropdown.value}`);
-			text.push('\n\n');}
+			text.push('\n');}
 	 
 	
 	 if (E2Checkbox.checked) {
 
-			 text.push('\n');
+			 text.push('\n\n');
             text.push(`PA radiograph taken. RADIOGRAPHIC EXAMINATION`);;
 			 } 
 	  
@@ -2718,25 +2718,27 @@ if (E48Checkbox.checked) {
 
 
     if (E53Checkbox.checked) {
-        text.push('\n');
-        text.push(`1) Bonded composite: ${E53Dropdown.value}`);
+        text.push('\n\n');
+           text.push('Post-endodontic restorative options discussed:');
+           text.push('\n');
+        text.push(`1) Bonded composite`);
     }
 
 
     if (E54Checkbox.checked) {
         text.push('\n');
-        text.push(`2) Crown: ${E54Dropdown.value}`);
+        text.push(`2) Crown`);
     }
 
 
     if (E55Checkbox.checked) {
-        text.push('\n');
+        text.push('\n\n');
         text.push('Pt understood that the type of final restoration recommended after RCT will be determined by the amount of tooth structure remaining after removal of existing restoration & caries & that a post may be indicated to retain the core.');
     }
 
     if (E56Checkbox.checked) {
-        text.push('\n');
-        text.push(`LA/Topical Used: ${E56Dropdown.value}`);
+        text.push('\n\n');
+        text.push(`${E56Dropdown.value}`);
     }
 
     if (E57Checkbox.checked) {
@@ -2746,17 +2748,17 @@ if (E48Checkbox.checked) {
 
     if (E58Checkbox.checked) {
         text.push('\n');
-        text.push(`Isolation: ${E58Dropdown.value}`);
+        text.push(`${E58Dropdown.value}`);
     }
 
     if (E59Checkbox.checked) {
-        text.push('\n');
+        text.push('\n\n');
         text.push('Cavity prepared using HS and SS, previous restoration removed/caries free.');
     }
 
     if (E60Checkbox.checked) {
         text.push('\n');
-        text.push(`NIL pulp exposure/ Pulp exposed: ${E60Dropdown.value}`);
+        text.push(`${E60Dropdown.value}`);
     }
 
 
@@ -2764,7 +2766,7 @@ if (E48Checkbox.checked) {
    
 
     if (E62Checkbox.checked) {
-        text.push('\n');
+        text.push('\n\n');
         text.push('Pre-endodontic provisional restoration completed using GIC/ composite/ bulk fill flowable composite.');
     }
 
@@ -2776,8 +2778,9 @@ if (E48Checkbox.checked) {
 
 
     if (E64Checkbox.checked) {
-        text.push('\n');
-        text.push(`Canal(s) identified. XA Protaper was used to prepare the coronal 3rd of all canal(s)`);
+        text.push('\n\n');
+          text.push(`${E64Dropdown.value} `);
+        text.push(`identified. XA Protaper was used to prepare the coronal 3rd of all canal(s)`);
     }
 
     if (E65Checkbox.checked) {
@@ -2786,15 +2789,25 @@ if (E48Checkbox.checked) {
     }
 
     if (E66Checkbox.checked) {
-        text.push('\n');
+        text.push('\n\n');
         text.push(`Proglider was used to prepare glide path in all canal(s). Canal(s) prepared up to Protaper ${E66ProtaperDropdown.value}, irrigated with 4% sodium hypochlorite & recapitulated with size 10 hand files after each instrumentation.`);
+    }
+     
+         if (E67Checkbox.checked) {
+        text.push('\n\n');
+        text.push('Access cavity is temporized with Odontopaste/ calcium hydroxide paste, Cavit, & Fuji 7 GIC (pink)');
+    }
+     
+         if (E68Checkbox.checked) {
+        text.push('\n');
+        text.push('Cusps lightly reduced to take tooth out of occlusion for symptomatic relief & decrease risk of cuspal fracture (discussed with pt prior to tx)');
     }
 	 
      
      
 			  const E69ATextInputValue = E69ATextInput.value;
           if (E69ATextInputValue.trim() !== '') {
-             text.push('\n');
+             text.push('\n\n');
 			text.push('Canal:');
               text.push(` ${E69ATextInputValue}`);
 			 }
