@@ -1,5 +1,18 @@
-@charset "utf-8";
+
+       @charset "utf-8";
 /* CSS Document */
+ #generatedText1 {
+  width: 90%;
+    height: 45%;
+    resize:vertical;
+    
+    position:relative; /* Change to fixed */
+
+       align-self: auto;
+         
+}
+
+
 
  body {
             font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif"
@@ -166,7 +179,7 @@
     resize:vertical;
     overflow: ;
     position:fixed; /* Change to fixed */
-    top: 115px;
+    top: 140px;
     right: 1;
 	   margin-top: 2.5%;
       /* Change from right: 1 to right: 0 */

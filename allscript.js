@@ -649,12 +649,9 @@ button.addEventListener("click",myFunction);
     }
 
     // Get all input elements
-    const inputFields = document.querySelectorAll('input');
+  
+    addEventListener('input', generateText);
 
-    // Add event listener to each input field
-    inputFields.forEach(function(input) {
-      input.addEventListener('input', generateText);
-    });
 	
 	
 
@@ -3855,7 +3852,12 @@ if (G62Checkbox.checked) {
     text.push('Too bulky in palatal or buccal surfaces');
 }
 
-		
+	
+   	
+    
+     	 text.push('\n');  
+     	text.push(`${generatedText1.value}`);
+     
 		//011 End 
 		  if (supervisorCheckbox.checked) {
         const supervisorNameTextInputValue = supervisorNameTextInput.value;
@@ -4482,7 +4484,9 @@ if (ff4G22Checkbox.checked) {
     }
    
 
-   
+
+// Event listener to track user-edited content
+
 
 
 });
