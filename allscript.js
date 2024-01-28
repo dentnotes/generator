@@ -52,6 +52,7 @@ Spry.Utils.addLoadListener(function() {
 Spry.$$("#button400").addEventListener('click', function(e){ toggleSection('perioclassSection1') }, false);	
 	Spry.$$("#button401").addEventListener('click', function(e){ toggleSection('eteethSection1') }, false);	
 	Spry.$$("#button402").addEventListener('click', function(e){ toggleSection('elistSection1') }, false);
+    	Spry.$$("#button403").addEventListener('click', function(e){ toggleSection('adayr41Section1') }, false);
 
 	function getElementsWithClass(TEST) {
     const elements = {};
