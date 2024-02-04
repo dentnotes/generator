@@ -1,3 +1,38 @@
+var finalizebool = true;
+
+function myFinalize() {
+    // Get the container element by ID
+    if(finalizebool){
+
+    var outcon = document.getElementById('generatedText');
+    outcon.disabled = false;
+      finalizebool = false;
+      
+    var container = document.getElementById('checkboxes');
+
+    // Get all input elements inside the container
+    var inputs = container.querySelectorAll('input, select, textarea');
+
+    // Disable each input element
+    inputs.forEach(function(input) {
+        input.disabled = true;
+    });
+  } else {
+      var outcon = document.getElementById('generatedText');
+    outcon.disabled = true;
+    finalizebool = true;
+      
+      var container = document.getElementById('checkboxes');
+  
+      // Get all input elements inside the container
+      var inputs = container.querySelectorAll('input, select, textarea');
+  
+      // Disable each input element
+      inputs.forEach(function(input) {
+          input.disabled = false;
+      });
+  }
+}
 
 
 
@@ -315,6 +350,8 @@ perio1medicalHxCheckbox.checked = E221Checkbox.checked;
       P10Checkbox.checked = E221Checkbox.checked;
       P1ACheckbox.checked = E221Checkbox.checked;
      P1BCheckbox.checked = E221Checkbox.checked;
+    LAperio16Checkbox.checked = E221Checkbox.checked;
+     LAperio17Checkbox.checked = E221Checkbox.checked;
      
     
 ptperio2Checkbox.checked = E250Checkbox.checked;
@@ -330,7 +367,8 @@ p40Checkbox10.checked = E250Checkbox.checked;
 perio2G22Checkbox.checked = E250Checkbox.checked;
 perio2supervisorCheckbox.checked = E250Checkbox.checked;
 perio2nvCheckbox.checked = E250Checkbox.checked;
-    
+     LAperio26Checkbox.checked = E250Checkbox.checked;
+     LAperio27Checkbox.checked = E250Checkbox.checked;
 	
 		B30Checkbox.checked = B105Checkbox.checked;
 		B31Checkbox.checked = B105Checkbox.checked;
@@ -623,7 +661,7 @@ document.getElementById('o1Checkbox6').checked = F1Checkbox.checked;
         var section = document.getElementById(sectionId);
         section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
         // Do not call generateText() here
-        adjustGeneratedTextWidth(); mvb
+        adjustGeneratedTextWidth();
     }
 
 
@@ -649,10 +687,14 @@ button.addEventListener("click",myFunction);
       }
     }
 
-    // Get all input elements
   
-    addEventListener('input', generateText);
-
+      // Get all input elements
+      const inputFields = document.querySelectorAll('input');
+  
+      // Add event listener to each input field
+      inputFields.forEach(function(input) {
+        input.addEventListener('input', generateText);
+      });
 	
 	
 
@@ -663,6 +705,9 @@ addEventListener('change', generateText);
 
     // Function to generate text based on selected options
  function generateText() {
+     
+     if(finalizebool){
+         
     const text = [];
  
     // 011 Intro
@@ -1314,7 +1359,8 @@ addEventListener('change', generateText);
     }
 	
 	
-
+ text.push('\n');  
+     	text.push(`${generatedText2.value}`);
      
 	 
 	 // 011 Body
@@ -2686,9 +2732,11 @@ if (E46Checkbox.checked) {
     text.push('Disinfection & hemostasis was achieved by compression of sterile cotton pellets soaked in 2% sodium hypochlorite over the pulp stump(s) using gentle pressure for 2-5mins.');
 }
 
-if (E47Checkbox.checked) {
-    text.push('\n');
-    text.push('Access cavity is temporized with calcium hydroxide paste, Cavit, & Fuji 7 GIC (pink)');
+    
+       if (E47Checkbox.checked) {
+        text.push('\n\n');
+        text.push('Access cavity is temporized with ');
+               text.push(`${E47ADropdown.value} ${E47BDropdown.value} & ${E47CDropdown.value} `);
 }
 
 if (E48Checkbox.checked) {
@@ -2793,7 +2841,8 @@ if (E48Checkbox.checked) {
      
          if (E67Checkbox.checked) {
         text.push('\n\n');
-        text.push('Access cavity is temporized with Odontopaste/ calcium hydroxide paste, Cavit, & Fuji 7 GIC (pink)');
+        text.push('Access cavity is temporized with ');
+               text.push(`${E67ADropdown.value} ${E67BDropdown.value} & ${E67CDropdown.value} `);
     }
      
          if (E68Checkbox.checked) {
@@ -3291,6 +3340,18 @@ if (P9Checkbox.checked) {
     }
 }
 
+     if (LAperio16Checkbox.checked) {
+        text.push('\n\n');
+        text.push(`${LAperio16Dropdown.value}`);
+    }
+
+    if (LAperio17Checkbox.checked) {
+        text.push('\n');
+        text.push(`Anesthetic Used: ${LAperio17Dropdown.value} VIA ${LAperio17InfilDropdown.value}`);
+    }
+
+
+     
 if (P10Checkbox.checked) {
      text.push('\n\n');
     text.push('Full perio charted. Significant findings:');
@@ -3536,7 +3597,15 @@ if (P19Checkbox.checked) {
 
 }
      
-     
+     if (LAperio26Checkbox.checked) {
+        text.push('\n\n');
+        text.push(`${LAperio26Dropdown.value}`);
+    }
+
+    if (LAperio27Checkbox.checked) {
+        text.push('\n');
+        text.push(`Anesthetic Used: ${LAperio27Dropdown.value} VIA ${LAperio27InfilDropdown.value}`);
+    }
      
 if (p40Checkbox5.checked) {
     text.push('\n\n');
@@ -4483,7 +4552,7 @@ if (ff4G22Checkbox.checked) {
 		
 	        generatedText.value = text.join(''); 
     }
-   
+   }
 
 
 // Event listener to track user-edited content

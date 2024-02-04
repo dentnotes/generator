@@ -12,7 +12,26 @@
          
 }
 
+ #generatedText1 {
+  width: 90%;
+    height: 45%;
+    resize:vertical;
+    
+    position:relative; /* Change to fixed */
 
+       align-self: auto;
+         
+}
+ #generatedText2 {
+  width: 90%;
+    height: 45%;
+    resize:vertical;
+    
+    position:relative; /* Change to fixed */
+
+       align-self: auto;
+         
+}
 
  body {
             font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif"
@@ -62,6 +81,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            position: relative;
     
     
         
@@ -187,7 +207,7 @@
        align-self: auto;
          
 }
- #button {
+.copybut {
      padding: 8px;
             border: none;
             border-radius: 4px;
@@ -195,8 +215,21 @@
 			font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	 position: fixed;
 	
-        }
+        
 }
+
+.finalize {
+    padding: 8px;
+           border: none;
+           border-radius: 4px;
+           cursor: pointer;
+           font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+            position: fixed;
+           left: 56%;;
+   
+       
+}
+
 
    table {
             width: auto;
