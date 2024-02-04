@@ -226,9 +226,48 @@
            font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
             position: fixed;
            left: 56%;;
-   
-       
 }
+
+
+.finalize:hover::after {
+  content: "Click this button to allow editing in text area. You will not be able to edit left section. If you disable button and edit on left, all your custom notes will be deleted.";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+    width: 400%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px;
+  border: 1px solid #888;
+  border-top: none;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.finalize::after {
+ content: "Click this button to allow editing in text area. You will not be able to edit left section. If you disable button and edit on left, all your custom notes will be deleted.";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+     width: 400%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px;
+  border: 1px solid #888;
+  border-top: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.finalize:hover{
+  border: 1px solid #888;
+  background-color: #3498db;
+ transition: visibility 0.002s;
+}
+
 
 
    table {
